@@ -56,6 +56,10 @@
 		public function delete_product($table_product,$cond){
 			return $this->db->delete($table_product,$cond);
 		}
+		public function productbyid($table,$cond){
+			$sql = "SELECT * FROM $table WHERE $cond";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>
