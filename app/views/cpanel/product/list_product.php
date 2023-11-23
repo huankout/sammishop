@@ -32,7 +32,7 @@
         <td><?php echo $i; ?></td>
         <td><?php echo $pro['title_product']; ?></td>
         <td><?php echo $pro['image_product']; ?></td>
-        <td><?php echo $pro['price_product']; ?></td>
+        <td><?php echo number_format($pro['price_product'], '0', ',', '.') . 'Đ'; ?></td>
         <td><?php echo $pro['quantity_product']; ?></td>
         <td><?php echo $pro['desc_product']; ?></td>
         
