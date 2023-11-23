@@ -94,10 +94,11 @@
 		public function list_product(){
 			$this->load->view('cpanel/header');
 			$this->load->view('cpanel/menu');
-			$table = "tbl_product";
+			$table_product = "tbl_product";
+			$table_category = "tbl_category_product";
 
 			$categorymodel = $this->load->model('categorymodel');
-			$data['product'] = $categorymodel->product($table);
+			$data['product'] = $categorymodel->product($table_product, $table_category);
 
 			$this->load->view('cpanel/product/list_product', $data);
 			$this->load->view('cpanel/footer');
@@ -114,6 +115,22 @@
 			$this->load->view('cpanel/product/list_category', $data);
 			$this->load->view('cpanel/footer');
 		}
+
+		public function delete_product($id){
+			$table = "tbl_product";
+			$cond = "id_product='$id'";
+			$categorymodel = $this->load->model('categorymodel');
+			$result = $categorymodel->delete_product($table,$cond);
+			if ($result == 1) {
+				$message['msg'] = "xóa sản phẩm thành công";
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
+
+			}else{
+				$message['msg'] = "xóa sản phẩm thất bại";
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
+			}
+		}
+
 		public function delete_category($id){
 			$table = "tbl_category_product";
 			$cond = "id_category_product='$id'";

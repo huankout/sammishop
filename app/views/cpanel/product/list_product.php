@@ -14,10 +14,11 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Tên sản phẩm</th>
-        <th>Ảnh sản phẩm</th>
-        <th>Giá sản phẩm</th>
-        <th>Số lượng sản phẩm</th>
+        <th>Tên</th>
+        <th>Ảnh</th>
+        <th>Danh mục</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
         <th>Mô tả</th>
         <th>Quản lý</th>
       </tr>
@@ -31,7 +32,8 @@
       <tr>
         <td><?php echo $i; ?></td>
         <td><?php echo $pro['title_product']; ?></td>
-        <td><?php echo $pro['image_product']; ?></td>
+        <td><img src="<?php echo BASE_URL?>public/uploads/product/<?php echo $pro['image_product']; ?>" height="100" width="100"></td>
+        <td><?php echo $pro['title_category_product']; ?></td>
         <td><?php echo number_format($pro['price_product'], '0', ',', '.') . 'Đ'; ?></td>
         <td><?php echo $pro['quantity_product']; ?></td>
         <td><?php echo $pro['desc_product']; ?></td>
