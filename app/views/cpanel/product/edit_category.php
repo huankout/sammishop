@@ -15,7 +15,7 @@
 		foreach ($categorybyid as $key => $cate) {
 			
 	?>
-	<form action="<?php echo BASE_URL ?>product/update_product/<?php echo $cate['id_category_product'] ?>" method="POST">
+	<form action="<?php echo BASE_URL ?>product/update_category_product/<?php echo $cate['id_category_product'] ?>" method="POST">
 	  <div class="form-group">
 	    <label for="email">Tên danh mục:</label>
 	    <input type="text" value="<?php echo $cate['title_category_product'] ?>" name="title_category_product" class="form-control" >

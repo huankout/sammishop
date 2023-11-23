@@ -90,6 +90,20 @@
 				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
 			}
 		}
+
+		public function list_product(){
+			$this->load->view('cpanel/header');
+			$this->load->view('cpanel/menu');
+			$table_product = "tbl_product";
+			$table_category = "tbl_category_product";
+
+			$categorymodel = $this->load->model('categorymodel');
+			$data['product'] = $categorymodel->product($table_product, $table_category);
+
+			$this->load->view('cpanel/product/list_product', $data);
+			$this->load->view('cpanel/footer');
+		}
+
 		public function list_category(){
 			$this->load->view('cpanel/header');
 			$this->load->view('cpanel/menu');
@@ -101,6 +115,22 @@
 			$this->load->view('cpanel/product/list_category', $data);
 			$this->load->view('cpanel/footer');
 		}
+
+		public function delete_product($id){
+			$table = "tbl_product";
+			$cond = "id_product='$id'";
+			$categorymodel = $this->load->model('categorymodel');
+			$result = $categorymodel->delete_product($table,$cond);
+			if ($result == 1) {
+				$message['msg'] = "xóa sản phẩm thành công";
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
+
+			}else{
+				$message['msg'] = "xóa sản phẩm thất bại";
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
+			}
+		}
+
 		public function delete_category($id){
 			$table = "tbl_category_product";
 			$cond = "id_category_product='$id'";
@@ -125,6 +155,21 @@
 			$this->load->view('cpanel/product/edit_category',$data);
 			$this->load->view('cpanel/footer');
 		}
+
+		public function edit_product($id){
+			$table = "tbl_product";
+			$table_category = "tbl_category_product";
+			$cond = "id_product='$id'";
+			$categorymodel = $this->load->model('categorymodel');
+			$data['productbyid'] = $categorymodel->productbyid($table,$cond);
+			
+			$data['category'] = $categorymodel->category($table_category);
+			$this->load->view('cpanel/header');
+			$this->load->view('cpanel/menu');
+			$this->load->view('cpanel/product/edit_product',$data);
+			$this->load->view('cpanel/footer');
+		}
+
 		public function update_product($id){
 
 			$table = "tbl_category_product";
@@ -146,6 +191,29 @@
 				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
 			}
 		}
+		
+		public function update_category_product($id){
+
+			$table = "tbl_category_product";
+			$cond = "id_category_product='$id'";
+			$title = $_POST['title_category_product'];
+			$desc = $_POST['desc_category_product'];
+			$data = array(
+				'title_category_product' => $title,
+				'desc_category_product' => $desc
+			);
+			$categorymodel = $this->load->model('categorymodel');
+			$result = $categorymodel->updatecategory($table,$data,$cond);
+			if ($result == 1) {
+				$message['msg'] = "cập nhật danh mục thành công";
+				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
+
+			}else{
+				$message['msg'] = "cập nhật danh mục thất bại";
+				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
+			}
+		}
+
 
 	}
 
