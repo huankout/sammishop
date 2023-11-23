@@ -1,0 +1,150 @@
+.header-container{
+    position: fixed;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+    background: #cb7802;
+    z-index: 1;
+}
+header{
+    width: 100%;
+    height: 100px;
+}
+.logo-container{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 0 30px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    /* display: inline-block; */
+}
+.right-header{
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 165px);
+    vertical-align: 25px;
+}
+.upper-search{
+    position:relative;
+    display: inline-block;
+    width: 100%;
+}
+.left-upper-search{
+    display: inline-block;
+}
+
+.right-upper-search{
+    display: inline-block;
+    position: absolute;
+    right:20px;
+}
+.title1{
+    color: #ff0000;
+    font-size: 12px;
+}
+.title2{
+    position:relative;
+    font-size: 12px;
+    bottom: 0;
+}
+.title3{
+    color: #ff0000;
+    text-align: right;
+    align-content: end;
+    font-size: 12px;
+}
+.title4{
+    text-align: right;
+    font-size: 12px;
+}
+
+.search{
+    background: #ab1212;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px 10px 0px;
+    width: calc(100% - 40px);
+}   
+.searchbar-container{
+    margin-left: 15px;
+    display: inline-block;
+    width: calc(100% - 100px);
+}
+.search-bar{
+    width: calc(100% - 40px);
+    margin-left: 5%;
+}
+.search-button{
+    width: 22px;
+    height: 22px;
+    vertical-align: -6px;
+}
+.search-button-div{
+    margin-left: 5px;
+    display: inline-block;
+    position: absolute;
+}
+.user-button{
+    width: 22px;
+    height: 22px;
+    vertical-align: -6px;
+}
+.user-button-div{
+    position: absolute;
+    left: calc(100% - 35px);
+    display: inline-block;
+}
+.menu{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header-nav{
+    display: inline-block;
+    background: #e0c3c3;
+    width: calc(100%/6);
+}
+.header-item{
+    font-size: 11px;
+    padding: 20px 5px;
+    height: 12px;
+    text-align: center;
+    border: solid .5px #ffffff;
+}
+.category{
+    background: red;
+}
+.category-item{
+    /* display: none; */
+    padding: 10px 5px;
+    font-size: 11px;
+    background-color: rgb(243, 94, 94);
+    border: solid #e0c3c3 .5px;
+}
+.category-container{
+    position: absolute;
+    display: none;
+}
+.board{
+    background: #e0c3c3;
+    position: absolute;
+    left: 160px;
+    top: 0;
+    height: 250px;
+    width: 500px;
+    display: none;
+}
+.content{
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+    vertical-align: top;
+}
+.top-content{
+    font-weight: bold;
+}
