@@ -90,6 +90,19 @@
 				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
 			}
 		}
+
+		public function list_product(){
+			$this->load->view('cpanel/header');
+			$this->load->view('cpanel/menu');
+			$table = "tbl_product";
+
+			$categorymodel = $this->load->model('categorymodel');
+			$data['product'] = $categorymodel->product($table);
+
+			$this->load->view('cpanel/product/list_product', $data);
+			$this->load->view('cpanel/footer');
+		}
+
 		public function list_category(){
 			$this->load->view('cpanel/header');
 			$this->load->view('cpanel/menu');
