@@ -49,6 +49,10 @@
 		public function insert_product($table, $data){
 			return $this->db->insert($table,$data);
 		}
+		public function product($table){
+			$sql = "SELECT * FROM $table ORDER BY id_product DESC";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>
