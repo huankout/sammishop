@@ -61,11 +61,11 @@
 			if ($result == 1) {
 				move_uploaded_file($tmp_image, $path_uploads);
 				$message['msg'] = "thêm sản phẩm thành công";
-				header("Location:".BASE_URL."product/add_product?msg=".urlencode(serialize($message)));
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
 
 			}else{
 				$message['msg'] = "thêm sản phẩm thất bại";
-				header("Location:".BASE_URL."product/add_product?msg=".urlencode(serialize($message)));
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
 			}
 		}
 
@@ -193,10 +193,10 @@
 			if ($image) {
 				
 				$data['productbyid'] = $categorymodel->productbyid($table,$cond);
-				foreach ($productbyid as $key => $value) {
-					if ($value['image_product']) {
-						unlink("public/uploads/product/" . $value['image_product']);
-					}
+				foreach ($data['productbyid'] as $key => $value) {
+					
+					$path_unlink = "public/uploads/product/";
+					unlink($path_unlink . $value['image_product']);
 				}	
 				$data = array(
 				'title_product' => $title,

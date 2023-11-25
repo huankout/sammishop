@@ -60,8 +60,8 @@
 			$sql = "SELECT * FROM $table WHERE $cond";
 			return $this->db->select($sql);
 		}
-		public function updateproduct($table_category_product,$data,$cond){
-			return $this->db->update($table_category_product,$data,$cond);
+		public function updateproduct($table,$data,$cond){
+			return $this->db->update($table,$data,$cond);
 		}
 	}
 
