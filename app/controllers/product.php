@@ -29,22 +29,21 @@
 			$this->load->view('cpanel/footer');
 		}
 		public function insert_product(){
+
+			$table = "tbl_product";
+
 			$title = $_POST['title_product'];
 			$price = $_POST['price_product'];
 			$desc = $_POST['desc_product'];
 			$quantity = $_POST['quantity_product'];
+			$category = $_POST['category_product'];
+
 			$image = $_FILES['image_product']['name'];
 			$tmp_image = $_FILES['image_product']['tmp_name'];
 			$div = explode('.', $image);
-
 			$file_ext = strtolower(end($div));
 			$unique_image = $div[0].time().'.'.$file_ext;
-
-			$path_uploads = "public/uploads/product".$unique_image;
-
-			$category = $_POST['category_product'];
-
-			$table = "tbl_product";
+			$path_uploads = "public/uploads/product/".$unique_image;
 
 			$data = array(
 				'title_product' => $title,
@@ -60,6 +59,7 @@
 			$result = $categorymodel->insert_product($table, $data);
 
 			if ($result == 1) {
+				move_uploaded_file($tmp_image, $path_uploads);
 				$message['msg'] = "thêm sản phẩm thành công";
 				header("Location:".BASE_URL."product/add_product?msg=".urlencode(serialize($message)));
 
@@ -161,6 +161,7 @@
 			$table_category = "tbl_category_product";
 			$cond = "id_product='$id'";
 			$categorymodel = $this->load->model('categorymodel');
+
 			$data['productbyid'] = $categorymodel->productbyid($table,$cond);
 			
 			$data['category'] = $categorymodel->category($table_category);
@@ -172,23 +173,62 @@
 
 		public function update_product($id){
 
-			$table = "tbl_category_product";
-			$cond = "id_category_product='$id'";
-			$title = $_POST['title_category_product'];
-			$desc = $_POST['desc_category_product'];
-			$data = array(
-				'title_category_product' => $title,
-				'desc_category_product' => $desc
-			);
+			$table = "tbl_product";
 			$categorymodel = $this->load->model('categorymodel');
-			$result = $categorymodel->updatecategory($table,$data,$cond);
+			$cond = "id_product='$id'";
+
+			$title = $_POST['title_product'];
+			$price = $_POST['price_product'];
+			$desc = $_POST['desc_product'];
+			$quantity = $_POST['quantity_product'];
+			$category = $_POST['category_product'];
+
+			$image = $_FILES['image_product']['name'];
+			$tmp_image = $_FILES['image_product']['tmp_name'];
+			$div = explode('.', $image);
+			$file_ext = strtolower(end($div));
+			$unique_image = $div[0].time().'.'.$file_ext;
+			$path_uploads = "public/uploads/product/".$unique_image;
+
+			if ($image) {
+				
+				$data['productbyid'] = $categorymodel->productbyid($table,$cond);
+				foreach ($productbyid as $key => $value) {
+					if ($value['image_product']) {
+						unlink("public/uploads/product/" . $value['image_product']);
+					}
+				}	
+				$data = array(
+				'title_product' => $title,
+				'price_product' => $price,
+				'desc_product' => $desc,
+				'quantity_product' => $quantity,
+				'image_product' => $image,
+				'id_category_product' => $category
+				);
+				move_uploaded_file($tmp_image, $path_uploads);
+			}else{
+				$data = array(
+				'title_product' => $title,
+				'price_product' => $price,
+				'desc_product' => $desc,
+				'quantity_product' => $quantity,
+				//'image_product' => $image,
+				'id_category_product' => $category
+
+			);
+			}
+
+			$result = $categorymodel->updateproduct($table, $data, $cond);
+
 			if ($result == 1) {
-				$message['msg'] = "cập nhật danh mục thành công";
-				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
+
+				$message['msg'] = "Cập nhật sản phẩm thành công";
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
 
 			}else{
-				$message['msg'] = "cập nhật danh mục thất bại";
-				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
+				$message['msg'] = "Cập nhật sản phẩm thất bại";
+				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
 			}
 		}
 		
