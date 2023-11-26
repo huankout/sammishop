@@ -12,6 +12,10 @@
 			$sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
 			return $this->db->select($sql);
 		}
+		public function category_home($table){
+			$sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
+			return $this->db->select($sql);
+		}
 		public function categorybyid($table,$cond){
 			$sql = "SELECT * FROM $table WHERE $cond";
 			return $this->db->select($sql);
