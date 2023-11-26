@@ -16,7 +16,7 @@
 			
 		
 	?>
-	<form action="<?php echo BASE_URL ?>product/update_product<?php echo $pro['id_product'] ?>" method="POST" enctype="multipart/form-data">
+	<form action="<?php echo BASE_URL ?>product/update_product/<?php echo $pro['id_product'] ?>" method="POST" enctype="multipart/form-data">
 	  <div class="form-group">
 	    <label for="email">Tên sản phẩm:</label>
 	    <input type="text" value="<?php echo $pro['title_product'] ?>" name="title_product" class="form-control" >
@@ -40,15 +40,10 @@
 	  </div>
 	  <div class="form-group">
 	    <label for="pwd">danh mục sản phẩm:</label>
-	    <select class="form-control" name="category_product">
-	    	<?php foreach ($category as $key => $cate) { ?>
-	    		<option <?php if ($cate['id_category_product'] == $pro['id_category_product']) {
-	    				echo "selected";
-	    		?> value="<?php echo $cate['id_category_product']; ?>"><?php echo $cate['title_category_product']; ?></option>
-	    	<?php 
-	    		}
-	    	}
-	    	?>
+	    <select class="form-control" name="category_product" id="category_select">
+		<?php foreach ($category as $key => $cate) { ?>
+	    		<option value="<?php echo $cate['id_category_product']; ?>"><?php echo $cate['title_category_product']; ?></option>
+	    <?php } ?>
 	    	
 	    </select>
 	  </div>
@@ -56,3 +51,19 @@
 	</form>
 	<?php } ?>	
 </div>
+
+<script>
+  // Lấy giá trị từ PHP và đặt vào biến JavaScript
+  var selectedValue = "<?php echo $pro['id_category_product']; ?>";
+
+  // Tìm option có giá trị tương ứng và đặt thuộc tính selected
+  var selectElement = document.getElementById("category_select");
+  var options = selectElement.options;
+
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].value === selectedValue) {
+      options[i].selected = true;
+      break; // Dừng lại khi đã tìm thấy và đặt giá trị
+    }
+  }
+</script>

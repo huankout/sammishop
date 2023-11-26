@@ -1,5 +1,5 @@
 <?php
 
-	define('BASE_URL', 'http://localhost/blogs_ecommerce/');
+	define('BASE_URL', 'http://localhost/sammishop/');
 
 ?>
