@@ -32,5 +32,12 @@
 			$this->load->view('detail_product');
 			$this->load->view('footer');
 		}
+
+		public function contact(){
+			$this->load->view('header');
+			// $this->load->view('slider');
+			$this->load->view('contact');
+			$this->load->view('footer');
+		}
 	}
 ?>
