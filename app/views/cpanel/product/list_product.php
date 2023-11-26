@@ -8,6 +8,7 @@
   }
 
 ?>
+<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public\template\css\list_product.css">
 <h2 style="text-align: center;">Liệt kê sản phẩm</h2>
 
 <table class="table table-striped">
@@ -30,15 +31,15 @@
         $i++;
       ?>
       <tr>
-        <td><?php echo $i; ?></td>
-        <td><?php echo $pro['title_product']; ?></td>
-        <td><img src="<?php echo BASE_URL?>public/uploads/product/<?php echo $pro['image_product']; ?>" height="100" width="100"></td>
-        <td><?php echo $pro['title_category_product']; ?></td>
-        <td><?php echo number_format($pro['price_product'], '0', ',', '.') . 'Đ'; ?></td>
-        <td><?php echo $pro['quantity_product']; ?></td>
-        <td><?php echo $pro['desc_product']; ?></td>
+        <td><div class="col1"><?php echo $i; ?></div></td>
+        <td><div class="col2"><?php echo $pro['title_product']; ?></div></td>
+        <td><div class="col3"><img src="<?php echo BASE_URL?>public/uploads/product/<?php echo $pro['image_product']; ?>" height="100" width="100"></div></td>
+        <td><div class="col4"><?php echo $pro['title_category_product']; ?></div></td>
+        <td><div class="col5"><?php echo number_format($pro['price_product'], '0', ',', '.') . 'Đ'; ?></div></td>
+        <td><div class="col6"><?php echo $pro['quantity_product']; ?></div></td>
+        <td><div class="col7"><textarea class="text7"><?php echo $pro['desc_product']; ?></textarea></div></td>
         
-        <td><a href="<?php echo BASE_URL ?>product/delete_product/<?php echo $pro['id_product'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>product/edit_product/<?php echo $pro['id_product'] ?>">Cập nhật</a></td>
+        <td><div class="col8"><a href="<?php echo BASE_URL ?>product/delete_product/<?php echo $pro['id_product'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>product/edit_product/<?php echo $pro['id_product'] ?>">Cập nhật</a></tr></td>
       </tr>
       <?php } ?>
     </tbody>
