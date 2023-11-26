@@ -1,4 +1,4 @@
-      <section>
+<section>
          <div class="bg_in">
             <div class="wrapper_all_main">
                <div class="wrapper_all_main_right">
@@ -15,7 +15,7 @@
                            itemtype="http://schema.org/ListItem">
                            <span itemprop="item">
                            <strong itemprop="name">
-                           Tin tức
+                           Tất cả tin tức
                            </strong>  
                            </span>
                            <meta itemprop="position" content="2" />
@@ -26,13 +26,13 @@
                   <div class="content_page">
                      <div class="box-title">
                         <div class="title-bar">
-                           <h1>Tin tức</h1>
+                           <h1>Tất cả tin tức</h1>
                         </div>
                      </div>
                      <div class="content_text">
                         <ul class="list_ul">
                            <?php
-                              foreach($postbyid as $key => $post){
+                              foreach($list_post as $key => $post){
                            ?>
                            <li class="lists">
                               <div class="img-list">

@@ -16,6 +16,8 @@
 			$data['category'] = $categorymodel->category_home($table);
 			$table_post = 'tbl_category_post';
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
+			
+
 			$this->load->view('header', $data);
 			$this->load->view('slider');
 			$this->load->view('home');
@@ -25,6 +27,8 @@
 			$table = 'tbl_category_product';
 			$categorymodel = $this->load->model('categorymodel');
 			$data['category'] = $categorymodel->category_home($table);
+			$table_post = 'tbl_category_post';
+			$data['category_post'] = $categorymodel->categorypost_home($table_post);
 
 			$this->load->view('header', $data);
 			$this->load->view('404');
@@ -34,6 +38,8 @@
 			$table = 'tbl_category_product';
 			$categorymodel = $this->load->model('categorymodel');
 			$data['category'] = $categorymodel->category_home($table);
+			$table_post = 'tbl_category_post';
+			$data['category_post'] = $categorymodel->categorypost_home($table_post);
 
 			$this->load->view('header', $data);
 			// $this->load->view('slider');

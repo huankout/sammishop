@@ -119,7 +119,7 @@
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Giới thiệu</a></li>
                                     <li class=''>
 
-                                        <a href='<?php echo BASE_URL ?>index/category'>Sản phẩm</a>
+                                        <a href='<?php echo BASE_URL ?>user_product/all'>Sản phẩm</a>
 
                                         <ul>
                                             <?php
@@ -128,7 +128,7 @@
                                             
                                             ?>
                                             <li>
-                                                <a href='<?php echo BASE_URL ?>index/category<?php echo $cate['id_category_product'] ?>'><?php echo $cate['title_category_product'] ?></a>
+                                                <a href='<?php echo BASE_URL ?>user_product/category/<?php echo $cate['id_category_product'] ?>'><?php echo $cate['title_category_product'] ?></a>
                                                 
                                             </li>
                                             <?php
@@ -137,19 +137,12 @@
                                         </ul>
                                     </li>
 
-                                    <li class=''>
-                                        <a href='<?php echo BASE_URL ?>news'>Tin tức</a>
-                                        <ul>
-                                            <li><a href=''>danh mục tin</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class=''><a href='<?php echo BASE_URL ?>news'>Tin tức</a>
+                                    <li class=''><a href='<?php echo BASE_URL ?>news/all'>Tin tức</a>
                                     <ul>
                                         <?php
                                             foreach($category_post as $key => $cate_post) {
                                         ?>
-                                        <li> <a href="<?php echo BASE_URL ?>index/category/<?php echo $cate_post['title_category_post'] ?>"><span><?php echo $cate_post['title_category_post'] ?></span></a></li>
+                                        <li> <a href="<?php echo BASE_URL ?>news/category/<?php echo $cate_post['id_category_post'] ?>"><span><?php echo $cate_post['title_category_post'] ?></span></a></li>
                                         <?php
                                             }
                                         ?>

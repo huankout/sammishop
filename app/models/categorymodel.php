@@ -16,6 +16,10 @@
 			$sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
 			return $this->db->select($sql);
 		}
+		public function categorybyid_home($table,$table_product, $id){
+			$sql = "SELECT * FROM $table,$table_product WHERE $table.id_category_product = $table_product.id_category_product AND $table_product.id_category_product='$id' ORDER BY $table_product.id_category_product DESC";
+			return $this->db->select($sql);
+		}
 		public function categorybyid($table,$cond){
 			$sql = "SELECT * FROM $table WHERE $cond";
 			return $this->db->select($sql);
@@ -38,6 +42,14 @@
 			$sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
 			return $this->db->select($sql);
 		}
+		public function categorypost_home($table_post){
+			$sql = "SELECT * FROM $table_post ORDER BY id_category_post DESC";
+			return $this->db->select($sql);
+		}
+		public function postbyid_home($table_cate_post,$table_post,$id){
+			$sql = "SELECT * FROM $table_post,$table_cate_post WHERE $table_post.id_category_post = $table_cate_post.id_category_post AND $table_post.id_category_post='$id' ORDER BY $table_post.id_post DESC";
+			return $this->db->select($sql);
+		}
 		public function deletecategory_post($table_category_post,$cond){
 			return $this->db->delete($table_category_post,$cond);
 		}
@@ -50,6 +62,10 @@
 		}
 
 		//product
+		public function list_product_home($table_product){
+			$sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
+			return $this->db->select($sql);
+		}
 		public function insert_product($table, $data){
 			return $this->db->insert($table,$data);
 		}

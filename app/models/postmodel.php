@@ -30,6 +30,10 @@
 			$sql = "SELECT * FROM $table_post, $table_category WHERE $table_post.id_category_post = $table_category.id_category_post ORDER BY id_post DESC";
 			return $this->db->select($sql);
 		}
+		public function list_post_home($post){
+			$sql = "SELECT * FROM $post ORDER BY id_post DESC";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>
