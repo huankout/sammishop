@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/product.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/style.css">
-    
+
 </head>
 
 <body>
@@ -168,7 +168,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class=''><a href='chitiettin.php'>Tin tức</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL ?>news'>Tin tức</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Giỏ hàng</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Liên hệ</a></li>
                                 </ul>
