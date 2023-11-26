@@ -253,8 +253,6 @@
 				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
 			}
 		}
-
-
 	}
 
 ?>
