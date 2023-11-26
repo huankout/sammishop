@@ -168,7 +168,17 @@
                                         </ul>
                                     </li>
 
-                                    <li class=''><a href='<?php echo BASE_URL ?>news'>Tin tức</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL ?>news'>Tin tức</a>
+                                    <ul>
+                                        <?php
+                                            foreach($category_post as $key => $cate_post) {
+                                        ?>
+                                        <li> <a href="<?php echo BASE_URL ?>index/category/<?php echo $cate_post['title_category_post'] ?>"><span><?php echo $cate_post['title_category_post'] ?></span></a></li>
+                                        <?php
+                                            }
+                                        ?>
+                                    </ul>
+                                    </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Giỏ hàng</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Liên hệ</a></li>
                                 </ul>

@@ -10,7 +10,12 @@
 			$this->homepage();
 		}
 		public function homepage(){
-			$this->load->view('header');
+
+			$table_post = 'tbl_category_post';
+			$categorymodel = $this->load->model('categorymodel');
+			$data['category_post'] = $categorymodel->categorypost_home($table_post);
+
+			$this->load->view('header',$data);
 			$this->load->view('slider');
 			$this->load->view('home');
 			$this->load->view('footer');
