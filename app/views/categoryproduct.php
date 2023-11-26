@@ -45,7 +45,7 @@
                         </div>
                      </div>
                      <div class="name-pro-right">
-                        <a href="chitietsp.php">
+                        <a href="<?php echo BASE_URL ?>index/detail_product/18">
                            <h3>Iphone X 64GB</h3>
                         </a>
                      </div>

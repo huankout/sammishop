@@ -17,7 +17,7 @@
                                 <div class="content">
                                     <div class="img-right-pro">
 
-                                        <a href="<?php echo BASE_URL ?>index/detail_product/12">
+                                        <a href="<?php echo BASE_URL ?>index/detail_product/18">
                                             <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                         </a>
 
@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="name-pro-right">
-                                        <a href="<?php echo BASE_URL ?>index/detail_product/12">
+                                        <a href="<?php echo BASE_URL ?>index/detail_product/18">
                                             <h3>Iphone X 64GB</h3>
                                         </a>
                                     </div>

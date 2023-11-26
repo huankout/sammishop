@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/product.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/style.css">
-
+    
 </head>
 
 <body>

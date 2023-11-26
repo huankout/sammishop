@@ -315,7 +315,7 @@
                            <div class="content">
                               <div class="img-right-pro">
                                  <a href="sanpham.php">
-                                 <img class="lazy img-pro content-image" src="image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                 <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                  </a>
                                  <div class="content-overlay"></div>
                                  <div class="content-details fadeIn-top">
@@ -352,7 +352,7 @@
                            <div class="content">
                               <div class="img-right-pro">
                                  <a href="sanpham.php">
-                                 <img class="lazy img-pro content-image" src="image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                 <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                  </a>
                                  <div class="content-overlay"></div>
                                  <div class="content-details fadeIn-top">
@@ -389,7 +389,7 @@
                            <div class="content">
                               <div class="img-right-pro">
                                  <a href="sanpham.php">
-                                 <img class="lazy img-pro content-image" src="image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                 <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                  </a>
                                  <div class="content-overlay"></div>
                                  <div class="content-details fadeIn-top">

@@ -22,15 +22,15 @@
 		}
 		public function category(){
 			$this->load->view('header');
-			$this->load->view('slider');
+			// $this->load->view('slider');
 			$this->load->view('categoryproduct');
-			// $this->load->view('footer');
+			$this->load->view('footer');
 		}
 		public function detail_product(){
 			$this->load->view('header');
 			// $this->load->view('slider');
 			$this->load->view('detail_product');
-			// $this->load->view('footer');
+			$this->load->view('footer');
 		}
 	}
 ?>

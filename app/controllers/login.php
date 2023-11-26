@@ -11,8 +11,9 @@
 			$this->login();
 		}
 		public function login(){
-			$this->load->view('header');
 			Session::init();
+			$this->load->view('header');
+			
 			if (Session::get('login') == true) {
 				header('Location:'.BASE_URL."login/dashboard");
 			}
