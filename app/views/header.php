@@ -96,44 +96,16 @@
                                     <div class="cate_pro">
                                         <div id='cssmenu_flyout' class="display_destop_menu">
                                             <ul>
+                                                <?php
+                                                    foreach ($category as $key => $cate) {
+                                                ?>
                                                 <li class='active has-sub'>
-                                                    <a href='<?php echo BASE_URL ?>index/category'><span>Điện thoại</span></a>
-                                                    <div class="menu_sub_all">
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="<?php echo BASE_URL ?>index/category">Iphone X</a>
-                                                            </li>
-                                                            
-                                                            <div class="clear"></div>
-                                                        </ul>
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Samsung</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-
-                                                    </div>
-
+                                                    
+                                                    <a href='<?php echo BASE_URL ?>user_product/category/<?php echo $cate['id_category_product'] ?>'><span><?php echo $cate['title_category_product'] ?></span></a>
                                                 </li>
-
+                                                <?php
+                                                    }
+                                                ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -144,31 +116,33 @@
                             <div id='cssmenu'>
                                 <ul>
                                     <li class='active'><a href='index.php'>Trang chủ</a></li>
-                                    <li class='<?php echo BASE_URL ?>index/contact'><a href='chitiettin.php'>Giới thiệu</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Giới thiệu</a></li>
                                     <li class=''>
 
                                         <a href='<?php echo BASE_URL ?>index/category'>Sản phẩm</a>
 
                                         <ul>
-
-                                            <li><a href='<?php echo BASE_URL ?>index/category'>Apple</a>
-                                                <ul>
-                                                    <li><a href='<?php echo BASE_URL ?>index/category'>Iphone</a></li>
-                                                    <li><a href='<?php echo BASE_URL ?>index/category'>Macbook</a></li>
-                                                </ul>
+                                            <?php
+                                            foreach ($category as $key => $cate) {
+                                                
+                                            
+                                            ?>
+                                            <li>
+                                                <a href='<?php echo BASE_URL ?>index/category<?php echo $cate['id_category_product'] ?>'><?php echo $cate['title_category_product'] ?></a>
+                                                
                                             </li>
-
-                                            <li><a href='<?php echo BASE_URL ?>index/category'>Samsung</a>
-                                                <ul>
-                                                    <li><a href='sanpham.php'>Samsung A</a></li>
-                                                    <li><a href='sanpham.php'>Samsung B</a></li>
-                                                </ul>
-                                            </li>
-
+                                            <?php
+                                            }
+                                            ?>
                                         </ul>
                                     </li>
 
-                                    <li class=''><a href='<?php echo BASE_URL ?>news'>Tin tức</a></li>
+                                    <li class=''>
+                                        <a href='<?php echo BASE_URL ?>news'>Tin tức</a>
+                                        <ul>
+                                            <li><a href=''>danh mục tin</a></li>
+                                        </ul>
+                                    </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Giỏ hàng</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Liên hệ</a></li>
                                 </ul>
