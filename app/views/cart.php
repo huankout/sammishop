@@ -5,7 +5,7 @@
             <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                <li itemprop="itemListElement" itemscope
                   itemtype="http://schema.org/ListItem">
-                  <a itemprop="item" href=".">
+                  <a itemprop="item" href="<?php echo BASE_URL ?>">
                   <span itemprop="name">Trang chủ</span></a>
                   <meta itemprop="position" content="1" />
                </li>
@@ -40,52 +40,62 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <form action='./gio-hang/' method="post">
+                        <?php
+                           if(isset($_SESSION["shopping_cart"])){
+                              $total = 0;
+                        ?>
+                     <form action='<?php echo BASE_URL ?>cart/updatecart' method="POST">
+                        <?php
+                              foreach($_SESSION["shopping_cart"] as $key => $value){
+                                 $subtotal = $value['product_price'] * $value['product_quantity'];
+                                 $total += $subtotal;
+                        ?>
                         <tr class="tr">
                            <td data-th="Hình ảnh">
-                              <div class="col_table_image col_table_hidden-xs"><img src="public\images\iphone1.jpg" alt="Máy in laser Canon LBP251DW" class="img-responsive"/></div>
+                              <div class="col_table_image col_table_hidden-xs"><img src="<?php echo BASE_URL ?>public\images\<?php echo $value['product_image'] ?>" alt="<?php echo $value['product_title'] ?>" class="img-responsive"/></div>
                            </td>
                            <td data-th="Sản phẩm">
                               <div class="col_table_name">
-                                 <h4 class="nomargin">Iphone 1</h4>
+                                 <h4 class="nomargin"><?php echo $value['product_title'] ?></h4>
                               </div>
                            </td>
-                           <td data-th="Mã sản phẩm">
-                              <div class="col_table_name">
-                                 <h4 class="nomargin">Iphone 1</h4>
-                              </div>
-                           </td>
-                           <td data-th="Giá"><span class="color_red font_money">0</span></td>
+                           <td data-th="Giá"><span class="color_red font_money"><?php echo number_format($value['product_price'], '0', ',', '.') . 'đ'; ?></span></td>
                            <td data-th="Số lượng">
                               <div class="clear margintop5">
-                                 <div class="floatleft"><input type="number" class="inputsoluong" name="qty[576]"  value="1"></div>
-                                 <input type="hidden" name="check" value="999">
-                                 <div class="floatleft width50">
-                                    <button class="btn_df btn_table_td_rf_del btn-sm">
-                                    <i class="fa fa-refresh"></i></button>
-                                 </div>
+                                 <div class="floatleft"><input type="number" min ="1" class="inputsoluong" name="qty[<?php echo $value['product_id'] ?>]"  value="<?php echo $value['product_quantity'] ?>"></div>
                               </div>
                               <div class="clear"></div>
                            </td>
-                           <td data-th="Thành tiền" class="text_center"><span class="color_red font_money">0 đ</span></td>
-                           <td class="actions aligncenter" data-th="">
-                              <a onclick="return del(576,'Máy in laser Canon LBP251DW');" class="btn_df btn_table_td_rf_del btn-sm"><i class="fa fa-trash-o"></i> <span class="display_mobile">Xóa sản phẩm</span></a>                          
+                           <td data-th="Thành tiền" class="text_center"><span class="color_red font_money"><?php echo number_format($subtotal, '0', ',', '.') . 'đ'; ?></span></td>
+                           <td class="actions aligncenter">
+                              <input type="hidden" value="<?php echo $value['product_id'] ?>" name="delete_id">
+                              <input type="submit" style="box-shadow: none" value="Xoá" name="deletecart" class="btn btn-sm btn-warning">                  
+                              <input type="submit" style="box-shadow: none" value="Cập nhật" name="updatecart" class="btn btn-sm btn-primary">                  
                            </td>
                         </tr>
+                        <?php
+                           } if($total != 0){
+                        ?>
+                        
+                        <tr>
+                           <td colspan="7" class="textright_text">
+                              <div class="sum_price_all">
+                                 <span class="text_price">Tổng tiền thành toán</span>: 
+                                 <span class="text_price color_red"><?php echo number_format($total, '0', ',', '.') . ' đ'; ?></span>
+                              </div>
+                           </td>
+                        </tr>
+
+                     <?php
+                           }}
+                        ?>
                      </form>
-                     <tr>
-                        <td colspan="7" class="textright_text">
-                           <div class="sum_price_all">
-                              <span class="text_price">Tổng tiền thành toán</span>: 
-                              <span class="text_price color_red">0 đ</span>
-                           </div>
-                        </td>
-                     </tr>
+                     
                   </tbody>
                   <tfoot>
                      <tr class="tr_last">
                         <td colspan="7">
-                           <a href="." class="btn_df btn_table floatleft"><i class="fa fa-long-arrow-left"></i> Tiếp tục mua hàng</a>
+                           <a href="<?php echo BASE_URL ?>" class="btn_df btn_table floatleft"><i class="fa fa-long-arrow-left"></i> Tiếp tục mua hàng</a>
                            <div class="clear"></div>
                         </td>
                      </tr>
