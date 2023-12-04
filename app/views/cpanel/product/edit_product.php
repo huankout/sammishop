@@ -38,12 +38,26 @@
 	    <textarea name="desc_product" style="resize: none;" rows="5"  class="form-control"><?php echo $pro['desc_product'] ?></textarea>
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">danh mục sản phẩm:</label>
+	    <label for="pwd">Danh mục sản phẩm:</label>
 	    <select class="form-control" name="category_product" id="category_select">
 		<?php foreach ($category as $key => $cate) { ?>
 	    		<option value="<?php echo $cate['id_category_product']; ?>"><?php echo $cate['title_category_product']; ?></option>
 	    <?php } ?>
 	    	
+	    </select>
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Sản phẩm hot: </label>
+	    <select class="form-control" name="product_hot">
+			<?php if ($pro['product_hot'] == 0) {
+				
+			 ?>
+	    	<option selected value="0">Không</option>
+	    	<option value="1">Có</option>
+			<?php }else {?>
+				<option value="0">Không</option>
+				<option selected value="1">Có</option>
+			<?php } ?>
 	    </select>
 	  </div>
 	  <button type="submit" class="btn btn-default">Cập nhật sản phẩm</button>

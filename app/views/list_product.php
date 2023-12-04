@@ -39,13 +39,11 @@
                         <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/<?php echo $product['image_product'] ?>" data-original="<?php echo BASE_URL?>public/images/<?php echo $product['image_product'] ?>" alt="nhìn cái chó gì" />
                         </a>
                         <div class="content-overlay"></div>
-                        <div class="content-details fadeIn-top">
+                        <!-- <div class="content-details fadeIn-top">
                            <ul class="details-product-overlay">
-                              <?php
-                                 echo $product['desc_product']
-                              ?>
+                              
                            </ul>
-                        </div>
+                        </div> -->
                      </div>
                      <div class="name-pro-right">
                      <a href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">

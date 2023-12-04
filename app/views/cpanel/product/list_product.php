@@ -20,7 +20,8 @@
         <th>Danh mục</th>
         <th>Giá</th>
         <th>Số lượng</th>
-        <th>Mô tả</th>
+        <!-- <th>Mô tả</th> -->
+        <th>Sản phẩm hot</th>
         <th>Quản lý</th>
       </tr>
     </thead>
@@ -37,8 +38,16 @@
         <td><div class="col4"><?php echo $pro['title_category_product']; ?></div></td>
         <td><div class="col5"><?php echo number_format($pro['price_product'], '0', ',', '.') . 'Đ'; ?></div></td>
         <td><div class="col6"><?php echo $pro['quantity_product']; ?></div></td>
-        <td><div class="col7"><textarea class="text7"><?php echo $pro['desc_product']; ?></textarea></div></td>
+        <!-- <td><div class="col7"><textarea class="text7"> echo $pro['desc_product']; ?></textarea></div></td> -->
         
+        <td>
+          <?php if ($pro['product_hot'] == 0) {
+                  echo 'Không';
+          }else {
+                  echo 'Có';
+          } 
+          ?>
+        </td>
         <td><div class="col8"><a href="<?php echo BASE_URL ?>product/delete_product/<?php echo $pro['id_product'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>product/edit_product/<?php echo $pro['id_product'] ?>">Cập nhật</a></tr></td>
       </tr>
       <?php } ?>

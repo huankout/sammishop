@@ -115,7 +115,7 @@
                         <div class="search_top">
                             <div id='cssmenu'>
                                 <ul>
-                                    <li class='active'><a href='index.php'>Trang chủ</a></li>
+                                    <li class='active'><a href='<?php echo BASE_URL ?>'>Trang chủ</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Giới thiệu</a></li>
                                     <li class=''>
 

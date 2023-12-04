@@ -33,12 +33,19 @@
 	    <textarea name="desc_product" style="resize: none;" rows="5"  class="form-control"></textarea>
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">danh mục sản phẩm:</label>
+	    <label for="pwd">Danh mục sản phẩm:</label>
 	    <select class="form-control" name="category_product">
 	    	<?php foreach ($category as $key => $cate) { ?>
 	    		<option value="<?php echo $cate['id_category_product']; ?>"><?php echo $cate['title_category_product']; ?></option>
 	    	<?php } ?>
 	    	
+	    </select>
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Sản phẩm hot</label>
+	    <select class="form-control" name="product_hot">
+	    	<option value="0">Không</option>
+			<option value="1">Có</option>
 	    </select>
 	  </div>
 	  <button type="submit" class="btn btn-default">Thêm sản phẩm</button>

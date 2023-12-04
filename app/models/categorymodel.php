@@ -70,6 +70,10 @@
 			$sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
 			return $this->db->select($sql);
 		}
+		public function list_product_index($table_product){
+			$sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
+			return $this->db->select($sql);
+		}
 		public function insert_product($table, $data){
 			return $this->db->insert($table,$data);
 		}
