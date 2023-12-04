@@ -39,32 +39,17 @@
 	  </div>
 	  <div class="form-group">
 	    <label for="pwd">danh mục sản phẩm:</label>
-<<<<<<< HEAD
-	    <select class="form-control" name="category_product">
-	    	<?php foreach ($category as $key => $cate) { ?>
-	    		<option <?php if ($pro['id_category_product'] == $cate['id_category_product']) {
-	    			echo "selected";
-	    		} ?> value="<?php echo $cate['id_category_product']; ?>"><?php echo $cate['title_category_product']; ?></option>
-	    	<?php } ?>
-=======
 	    <select class="form-control" name="category_product" id="category_select">
 		<?php foreach ($category as $key => $cate) { ?>
 	    		<option value="<?php echo $cate['id_category_product']; ?>"><?php echo $cate['title_category_product']; ?></option>
 	    <?php } ?>
->>>>>>> dath
 	    	
 	    </select>
 	  </div>
 	  <button type="submit" class="btn btn-default">Cập nhật sản phẩm</button>
-<<<<<<< HEAD
-	</form>	
 	<?php
 		}
 	?>
-</div>
-=======
-	</form>	
-</div>
 
 <script>
   // Lấy giá trị từ PHP và đặt vào biến JavaScript
@@ -81,4 +66,3 @@
     }
   }
 </script>
->>>>>>> dath
