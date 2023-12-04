@@ -9,6 +9,9 @@
             <div class="box-title">
                 <div class="title-bar">
                     <h1>Sản phẩm HOT</h1>
+                    <a class="read_more" href="<?php echo BASE_URL ?>user_product/product_hot">
+                        Xem thêm
+                    </a>
                 </div>
             </div>
             <div class="pro_all_gird">
@@ -23,16 +26,11 @@
                                 <div class="img-right-pro">
                                     <a href="sanpham.php">
                                         <img class="lazy img-pro content-image"
-                                            src="<?php echo BASE_URL ?>public/images/<?php echo $product['image_product'] ?>"
-                                            data-original="<?php echo BASE_URL?>public/images/<?php echo $product['image_product'] ?>"
-                                            alt="nhìn cái chó gì" />
+                                            src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
+                                            data-original="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
+                                             />
                                     </a>
                                     <div class="content-overlay"></div>
-                                    <!-- <div class="content-details fadeIn-top">
-                                        <ul class="details-product-overlay">
-                                            
-                                        </ul>
-                                    </div> -->
                                 </div>
                                 <div class="name-pro-right">
                                     <a
@@ -72,6 +70,9 @@
             <div class="box-title">
                 <div class="title-bar">
                     <h1><?php echo $cate['title_category_product']; ?></h1>
+                    <a class="read_more" href="<?php echo BASE_URL ?>user_product/category/<?php echo $cate['id_category_product'] ?>">
+                         Xem thêm
+                    </a>
                 </div>
             </div>
             <div class="pro_all_gird">
@@ -86,9 +87,9 @@
                                 <div class="img-right-pro">
                                     <a href="sanpham.php">
                                         <img class="lazy img-pro content-image"
-                                            src="<?php echo BASE_URL ?>public/images/<?php echo $pro_cate['image_product'] ?>"
-                                            data-original="<?php echo BASE_URL?>public/images/<?php echo $pro_cate['image_product'] ?>"
-                                            alt="nhìn cái chó gì" />
+                                            src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $pro_cate['image_product'] ?>"
+                                            data-original="<?php echo BASE_URL ?>public/uploads/product/<?php echo $pro_cate['image_product'] ?>"
+                                             />
                                     </a>
                                     <div class="content-overlay"></div>
         

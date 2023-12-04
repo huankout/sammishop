@@ -22,7 +22,7 @@
 	  </div>
 	  <div class="form-group">
 	    <label for="pwd">Nội dung:</label>
-	    <textarea name="content_post" style="resize: none;" rows="10"  class="form-control"></textarea>
+	    <textarea id="editor" name="content_post" style="resize: none;" rows="10"  class="form-control"></textarea>
 	  </div>
 	  <div class="form-group">
 	    <label for="pwd">Danh mục bài viết:</label>

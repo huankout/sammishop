@@ -95,6 +95,14 @@
 			$sql = "SELECT * FROM $table_product, $table WHERE $cond";
 			return $this->db->select($sql);
 		}
+		public function product_hot($table_product){
+			$sql = "SELECT * FROM $table_product WHERE product_hot != 1 ORDER BY $table_product.id_product DESC";
+			return $this->db->select($sql);
+		}
+		public function post_index($post){
+			$sql = "SELECT * FROM $post ORDER BY id_post DESC LIMIT 5";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>

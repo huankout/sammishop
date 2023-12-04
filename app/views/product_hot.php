@@ -1,12 +1,3 @@
-<?php
-
-   $name = 'Danh mục chưa có sản phẩm';
-      foreach ($category_by_id as $key => $pro) {
-         $name = $pro['title_category_product'];
-      }
-
-?>
-
 <section>
     <div class="bg_in">
         <div class="breadcrumbs">
@@ -17,8 +8,8 @@
                     <meta itemprop="position" content="1" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a itemprop="item" href="sanpham.php">
-                        <span itemprop="name"><?php echo $name; ?></span></a>
+                    <a itemprop="item" href="">
+                        <span itemprop="name">Sản phẩm hot</span></a>
                     <meta itemprop="position" content="2" />
                 </li>
             </ol>
@@ -26,20 +17,20 @@
         <div class="module_pro_all">
             <div class="box-title">
                 <div class="title-bar">
-                    <h1>Danh mục : <?php echo $name; ?></h1>
+                    <h1>Tất cả sản phẩm hot</h1>
 
                 </div>
             </div>
             <div class="pro_all_gird">
                 <div class="girds_all list_all_other_page ">
                     <?php
-                     foreach($category_by_id as $key => $product){
+                     foreach($product_hot as $key => $product){
                      ?>
                     <div class="grids">
                         <div class="grids_in">
                             <div class="content">
                                 <div class="img-right-pro">
-                                    <a href="sanpham.php">
+                                    <a href="">
                                         <img class="lazy img-pro content-image"
                                             src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
                                             data-original="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"

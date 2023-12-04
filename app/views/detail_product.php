@@ -46,25 +46,14 @@
                   <div class="slider-galery ">
                      <div id="sync1" class="owl-carousel owl-theme">
                         <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/<?php echo $detail['image_product'] ?>" width="100%">
-                        </div>
-                        <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/iphone1.jpg" width="100%">
-                        </div>
-                        <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/iphonex.png" width="100%">
+                           <img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $detail['image_product'] ?>" width="100%">
                         </div>
                      </div>
                      <div id="sync2" class="owl-carousel owl-theme">
                         <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/<?php echo $detail['image_product'] ?>" width="100%">
+                           <img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $detail['image_product'] ?>" width="100%">
                         </div>
-                        <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/iphone1.jpg" width="100%">
-                        </div>
-                        <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/iphonex.png" width="100%">
-                        </div>
+                        
                      </div>
                   </div>
                   <div class="content-des-pro">

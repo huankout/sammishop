@@ -23,6 +23,20 @@
 			$this->load->view('list_product',$data);
 			$this->load->view('footer');
 		}
+		public function product_hot(){
+			$table = 'tbl_category_product';
+			$table_product =  'tbl_product';
+			$categorymodel = $this->load->model('categorymodel');
+			$data['category'] = $categorymodel->category_home($table);
+			$table_post = 'tbl_category_post';
+			$data['category_post'] = $categorymodel->categorypost_home($table_post);
+			$data['product_hot'] = $categorymodel->list_product_index($table_product);
+
+			// $this->load->view('slider');
+			$this->load->view('header', $data);
+			$this->load->view('product_hot', $data);
+			$this->load->view('footer');
+		}
 		public function category($id){
 			$table = 'tbl_category_product';
 			$table_product =  'tbl_product';
@@ -61,5 +75,6 @@
 			$this->load->view('detail_product', $data);
 			$this->load->view('footer');
 		}	
+
 	}
 ?>

@@ -46,12 +46,12 @@
                                        <h3>
                                           <a href="<?php echo BASE_URL ?>news/news_detail/<?php echo $post['id_post'] ?>"><?php echo $post['title_post'] ?></a>
                                        </h3>
-                                       <p class="list-news-status-p">
+                                       <!-- <p class="list-news-status-p">
                                           <a title="Thiết bị văn phòng">Thiết bị văn phòng</a> | <a title="26-12-2017" >26-12-2017</a>
-                                       </p>
+                                       </p> -->
                                     </div>
                                     <div class="content-list-in">
-                                       <p><span style="font-size:16px">Với lĩnh vực máy chiếu, hầu như các dòng sản phẩm máy chiếu trên thị trường sử dụng một trong hai công nghệ hiển thị hình ảnh phổ biến là công nghệ 3LCD và công nghệ DLP. Hiện nay, trong số các sản phẩm máy chiếu laser được sử dụng để trình chiếu dữ liệu thì duy chỉ có hãng <strong><a href="https://thietbivanphong123.com/san-pham/may-chieu-sony-c86.html" style="color:#000;text-decoration:none;">máy chiếu Sony</a></strong> sử dụng công nghệ hiển thị 3LCD còn các hãng khác như NEC, Optoma, Panasonic lại sử dụng công nghệ DLP.</span></p>
+                                       <p><span style="font-size:16px"><?php echo substr($post['content_post'], 0, 200) ?></span></p>
                                     </div>
                                     <div class="xt"><a href="<?php echo BASE_URL ?>news/news_detail/<?php echo $post['id_post'] ?>">Xem thêm</a></div>
                                  </div>

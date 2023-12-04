@@ -5,7 +5,7 @@
 		</div>
 		<ul class="nav navbar-nav">
 				<li class="active"><a href="<?php echo BASE_URL ?>login/dashboard">Trang chủ</a></li>
-				<li><a href="#">Thông tin website</a></li>
+				<!-- <li><a href="#">Thông tin website</a></li> -->
 
 				<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Danh mục bài viết
@@ -51,6 +51,8 @@
 		          <li><a href="<?php echo BASE_URL ?>order">Liệt kê</a></li>
         		</ul>
 				</li>
+				<li><a href="<?php echo BASE_URL ?>login/logout">Đăng xuất</a></li>
+
 		</ul>
 		</div>
 </nav>
