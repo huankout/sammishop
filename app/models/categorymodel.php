@@ -60,6 +60,10 @@
 		public function updatecategory_post($table_category_post,$data,$cond){
 			return $this->db->update($table_category_post,$data,$cond);
 		}
+		public function details_post_home($table_post,$post,$cond){
+			$sql = "SELECT * FROM $table_post,$post WHERE $cond ORDER BY $post.id_post DESC";
+			return $this->db->select($sql);
+		}
 
 		//product
 		public function list_product_home($table_product){
@@ -78,6 +82,10 @@
 		}
 		public function productbyid($table,$cond){
 			$sql = "SELECT * FROM $table WHERE $cond";
+			return $this->db->select($sql);
+		}
+		public function related_product_home($table,$table_product,$cond_related){
+			$sql = "SELECT * FROM $table,$table_product WHERE $cond_related";
 			return $this->db->select($sql);
 		}
 		public function updateproduct($table,$data,$cond){

@@ -63,8 +63,7 @@
 	?>
 </div>
 =======
-	</form>
-	<?php } ?>	
+	</form>	
 </div>
 
 <script>

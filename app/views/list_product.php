@@ -48,7 +48,7 @@
                         </div>
                      </div>
                      <div class="name-pro-right">
-                        <a href="<?php echo BASE_URL ?>index/detail_product/18">
+                     <a href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
                            <h3><?php echo $product['title_product'] ?></h3>
                         </a>
                      </div>

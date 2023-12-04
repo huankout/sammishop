@@ -42,9 +42,13 @@
 			$table = 'tbl_category_product';
 			$table_post = 'tbl_category_post';
 			$post = 'tbl_post';
+			$cond = "$table_post.id_category_post = $post.id_category_post AND $post.id_post = '$id'";
 			$categorymodel = $this->load->model('categorymodel');
 			$data['category'] = $categorymodel->category_home($table);
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
+
+			$data['detail_post'] = $categorymodel->details_post_home($table_post,$post,$cond);
+
 
 			$this->load->view('header', $data);
 			// $this->load->view('slider');

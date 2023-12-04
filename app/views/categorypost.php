@@ -46,7 +46,7 @@
                      ?>
                      <li class="lists">
                         <div class="img-list">
-                           <a href="<?php echo BASE_URL ?>news/news_detail/12">
+                           <a href="<?php echo BASE_URL ?>news/news_detail/<?php echo $post['id_post'] ?>">
                            <img src="<?php echo BASE_URL ?>public/uploads/post/<?php echo $post['image_post'] ?>" alt="<?php echo $post['title_post'] ?>" class="img-list-in">
                            </a>
                         </div>
