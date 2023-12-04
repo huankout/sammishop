@@ -1,23 +1,37 @@
+<?php  
+
+   foreach ($detail_product as $key => $value) {
+      $name_product = $value['title_product'];
+      $name_category_product = $value['title_category_product'];
+      $id_cate = $value['id_category_product'];
+   }
+
+?>
+
 <section>
+   <?php
+      foreach ($detail_product as $key => $detail) {
+
+   ?>
    <div class="bg_in">
       <div class="wrapper_all_main">
          <div class="wrapper_all_main_right no-padding-left" style="width:100%;">
             <div class="breadcrumbs">
                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                   <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                     <a itemprop="item" href=".">
+                     <a itemprop="item" href="<?php echo BASE_URL ?>">
                      <span itemprop="name">Trang chủ</span></a>
                      <meta itemprop="position" content="1" />
                   </li>
                   <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                     <a itemprop="item" href="sanpham.php">
-                     <span itemprop="name">Sản phẩm</span></a>
+                     <a itemprop="item" href="<?php echo BASE_URL ?>user_product/category/<?php echo $id_cate ?>">
+                     <span itemprop="name"><?php echo $name_category_product ?></span></a>
                      <meta itemprop="position" content="2" />
                   </li>
                   <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                      <span itemprop="item">
                      <strong itemprop="name">
-                     Iphone 6
+                        <?php echo $name_product ?>
                      </strong>
                      </span>
                      <meta itemprop="position" content="3" />
@@ -27,7 +41,7 @@
             <div class="content_page">
                <div class="content-right-items margin0">
                   <div class="title-pro-des-ct">
-                     <h1>Iphone 6</h1>
+                     <h1><?php echo $name_product ?></h1>
                   </div>
                   <div class="slider-galery ">
                      <div id="sync1" class="owl-carousel owl-theme">
@@ -66,26 +80,15 @@
                               <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
                            </div>
                            <div class="color_price">
-                              <span class="title_price bg_green">Giá bán</span> 17,960,000 <span>vnđ</span>. (GIÁ CHƯA VAT)
+                              <span class="title_price bg_green">Giá bán</span> <?php echo number_format($detail['price_product'], '0', ',', '.') . 'Đ'; ?> <span>vnđ</span>.
                               <div class="clear"></div>
-                           </div>
-                           <div class="color_price">
-                              <span class="title_price">Giá cũ</span> 
-                              <del>18,360,000 <span>vnđ</span></del>
                            </div>
                         </div>
                         <div class="clear"></div>
                      </div>
                      <div class="content-pro-des">
                         <div class="content_des">
-                           <p style="font-size: 16px;font-weight: bold;">Iphone X</p>
-                           <br />
-                           <p> -Bán hàng chính hãng (cam kết hoàn tiền 200% nếu hàng nhái, hàng dựng kém chất lượng)
-                           </p>
-                           <p>-Bảo hành toàn diện 12 tháng theo chế độ hãng</p>
-                           <p>-Cho dùng thử 07 ngày đầu đổi mới</p>
-                           <p>-Hỗ trợ bảo hành VIP - 1 đổi 1 trong 12 tháng</p>
-                           <p>-Hỗ trợ miễn phí kỹ thuật trọn đời</p>
+                           <?php echo $detail['desc_product'] ?>
                         </div>
                      </div>
                      <div class="ct">
@@ -109,18 +112,6 @@
                         </div>
                         <div class="clear"></div>
                      </div>
-                     <!--  <div class="conten-infor-pro">
-                        <p><img alt="phone icon thietbivanphong123.com" src="/data/upload/home-ico.png" style="height:16px; width:16px" />&nbsp;Địa chỉ : 439/4/20 KP1,Phường Tân Thới Hiệp,Quận 12,TPHCM</p>
-                        
-                        <p><img alt="phone icon thietbivanphong123.com" src="/data/upload/Phone-icon-thietbivanphong123.png" style="height:16px; width:16px" />&nbsp;0932 023 992</p>
-                        
-                        <p><img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Mr Quang: 090 66 99 038 &nbsp; &nbsp; &nbsp; &nbsp; <img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Mr Duy: 0938 62 69 60</p>
-                        
-                        <p><img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Ms Huyền: 0888 039 123 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Ms Ngọc: 090 247 0070</p>
-                        
-                        <p><img alt="clock icon thietbivanphong123.com" src="/data/upload/clock-icon.png" style="height:16px; width:16px" />&nbsp;Thời gian:Từ 8h - 17h30 thứ 2 đến thứ 6. T7&nbsp;từ 8h - 12h00</p>
-                        
-                        </div> -->
                      <div class="tags_products prodcut_detail">
                         <div class="tab_link">
                            <h3 class="title_tab_link">TAGS: </h3>
@@ -232,59 +223,10 @@
                </div>
             </div>
             <div class="product_detail_info">
-               <div class="module_pro_all" id="productDetail">
-                  <div class="box-title">
-                     <div class="title-bar">
-                        <h3>Chi tiết sản phẩm</h3>
-                     </div>
-                  </div>
-                  <div class="tab_content content_text_product content-module">
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                  </div>
-               </div>
-               <div class="module_pro_all" id="inforProduct">
-                  <div class="box-title">
-                     <div class="title-bar">
-                        <h3>Thông số kỹ thuật</h3>
-                     </div>
-                  </div>
-                  <div class="tab_content content_text_product content-module">
-                     <p>CRW - Wallmount:<br />
-                        - Cửa: 1 cánh trước Mica<br />
-                        - Tủ treo tường (Wall mount)<br />
-                        - -Màu sơn tĩnh&nbsp;<br />
-                        - Tủ có đánh dấu số U trên thanh tiêu chuẩn&nbsp;<br />
-                        - Logo COMRACK được dập nổi trên cánh trước của tủ<br />
-                        - Đáy và nóc có đột lỗ chờ đi dây<br />
-                        - Bảo hành 3 năm với tủ , 1 năm với phụ kiện&nbsp;
-                     </p>
-                  </div>
-               </div>
+               
             </div>
             <div class="clear"></div>
-            <script type="text/javascript">
-               CloudZoom.quickStart();
-               
-               jQuery(function($) {
-               
-                   var $userName = $('.name');
-               
-                   if ($userName.length) {
-               
-                       $userName.avatarMe({
-               
-                           className: 'avatar-me',
-               
-                           maxChar: 1
-               
-                       });
-               
-                   }
-               
-               });
-               
-            </script>
+            
             <div class="clear"></div>
             <div class="dmsub">
                <div class="tags_products desktop">
@@ -433,6 +375,7 @@
       </div>
       <div class="clear"></div>
    </div>
+<?php } ?>
    <script>
       jQuery(document).ready(function() {
       

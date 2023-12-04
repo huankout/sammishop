@@ -37,10 +37,21 @@
 			$this->load->view('categoryproduct', $data);
 			$this->load->view('footer');
 		}
-		public function detail_product(){
-			$this->load->view('header');
+		public function detail_product($id){
+			$table = 'tbl_category_product';
+			$table_product =  'tbl_product';
+			$table_post = 'tbl_category_post';
+			$cond = "$table_product.id_category_product = $table.id_category_product AND $table_product.id_product='$id'";
+
+			$categorymodel = $this->load->model('categorymodel');
+
+			$data['category'] = $categorymodel->category_home($table);
+			$data['category_post'] = $categorymodel->categorypost_home($table_post);
+			$data['detail_product'] = $categorymodel->detail_product_home($table,$table_product,$cond);
+
+			$this->load->view('header', $data);
 			// $this->load->view('slider');
-			$this->load->view('detail_product');
+			$this->load->view('detail_product', $data);
 			$this->load->view('footer');
 		}	
 	}

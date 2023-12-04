@@ -12,7 +12,7 @@
                            itemtype="http://schema.org/ListItem">
                            <span itemprop="item">
                            <strong itemprop="name">
-                           Tất cả tin tức
+                           Tất cả sản phẩm
                            </strong>  
                            </span>
                            <meta itemprop="position" content="2" />

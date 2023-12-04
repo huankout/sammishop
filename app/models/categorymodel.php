@@ -83,6 +83,10 @@
 		public function updateproduct($table,$data,$cond){
 			return $this->db->update($table,$data,$cond);
 		}
+		public function detail_product_home($table,$table_product,$cond){
+			$sql = "SELECT * FROM $table_product, $table WHERE $cond";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>

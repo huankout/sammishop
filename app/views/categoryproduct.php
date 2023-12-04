@@ -1,15 +1,24 @@
+<?php
+
+   $name = 'Danh mục chưa có sản phẩm';
+      foreach ($category_by_id as $key => $pro) {
+         $name = $pro['title_category_product'];
+      }
+
+?>
+
 <section>
    <div class="bg_in">
    <div class="breadcrumbs">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a itemprop="item" href=".">
+            <a itemprop="item" href="<?php echo BASE_URL ?>">
             <span itemprop="name">Trang chủ</span></a>
             <meta itemprop="position" content="1" />
          </li>
          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a itemprop="item" href="sanpham.php">
-            <span itemprop="name">Sản phẩm</span></a>
+            <span itemprop="name"><?php echo $name; ?></span></a>
             <meta itemprop="position" content="2" />
          </li>
       </ol>
@@ -17,10 +26,8 @@
    <div class="module_pro_all">
       <div class="box-title">
          <div class="title-bar">
-            <h1>Sản phẩm</h1>
-            <a class="read_more" href="sanpham.php">
-            Xem thêm
-            </a>
+            <h1>Danh mục : <?php echo $name; ?></h1>
+            
          </div>
       </div>
       <div class="pro_all_gird">
@@ -45,7 +52,7 @@
                         </div>
                      </div>
                      <div class="name-pro-right">
-                        <a href="<?php echo BASE_URL ?>index/detail_product/18">
+                        <a href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
                            <h3><?php echo $product['title_product'] ?></h3>
                         </a>
                      </div>
