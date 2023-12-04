@@ -39,9 +39,16 @@
 			$this->load->view('footer');
 		}
 		public function news_detail($id){
-			$this->load->view('header');
+			$table = 'tbl_category_product';
+			$table_post = 'tbl_category_post';
+			$post = 'tbl_post';
+			$categorymodel = $this->load->model('categorymodel');
+			$data['category'] = $categorymodel->category_home($table);
+			$data['category_post'] = $categorymodel->categorypost_home($table_post);
+
+			$this->load->view('header', $data);
 			// $this->load->view('slider');
-			$this->load->view('detail_post');
+			$this->load->view('detail_post', $data);
 			$this->load->view('footer');
 		}
 	}
