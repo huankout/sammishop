@@ -34,6 +34,7 @@
 
 			$title = $_POST['title_product'];
 			$price = $_POST['price_product'];
+			$hot = $_POST['product_hot'];
 			$desc = $_POST['desc_product'];
 			$quantity = $_POST['quantity_product'];
 			$category = $_POST['category_product'];
@@ -48,6 +49,7 @@
 			$data = array(
 				'title_product' => $title,
 				'price_product' => $price,
+				'product_hot' => $hot,
 				'desc_product' => $desc,
 				'quantity_product' => $quantity,
 				'image_product' => $image,
@@ -177,6 +179,7 @@
 			$categorymodel = $this->load->model('categorymodel');
 			$cond = "id_product='$id'";
 
+			$hot = $_POST['product_hot'];
 			$title = $_POST['title_product'];
 			$price = $_POST['price_product'];
 			$desc = $_POST['desc_product'];
@@ -201,6 +204,7 @@
 				$data = array(
 				'title_product' => $title,
 				'price_product' => $price,
+				'product_hot' => $hot,
 				'desc_product' => $desc,
 				'quantity_product' => $quantity,
 				'image_product' => $image,
@@ -211,6 +215,7 @@
 				$data = array(
 				'title_product' => $title,
 				'price_product' => $price,
+				'product_hot' => $hot,
 				'desc_product' => $desc,
 				'quantity_product' => $quantity,
 				//'image_product' => $image,
