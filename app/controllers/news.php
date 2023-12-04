@@ -42,12 +42,20 @@
 			$table = 'tbl_category_product';
 			$table_post = 'tbl_category_post';
 			$post = 'tbl_post';
+			$postmodel = $this->load->model('postmodel');
 			$cond = "$table_post.id_category_post = $post.id_category_post AND $post.id_post = '$id'";
 			$categorymodel = $this->load->model('categorymodel');
 			$data['category'] = $categorymodel->category_home($table);
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
 
-			$data['detail_post'] = $categorymodel->details_post_home($table_post,$post,$cond);
+			$data['detail_post'] = $postmodel->details_post_home($table_post,$post,$cond);
+
+			foreach($data['detail_post'] as $key => $cate){
+				$id_cate = $cate['id_category_post'];
+			} 
+
+			$cond_related = "$table_post.id_category_post = $post.id_category_post AND $post.id_category_post='$id_cate' AND $post.id_post != '$id'";
+			$data['related'] = $postmodel->related_post_home($post,$table_post,$cond_related);
 
 
 			$this->load->view('header', $data);

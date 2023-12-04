@@ -60,10 +60,6 @@
 		public function updatecategory_post($table_category_post,$data,$cond){
 			return $this->db->update($table_category_post,$data,$cond);
 		}
-		public function details_post_home($table_post,$post,$cond){
-			$sql = "SELECT * FROM $table_post,$post WHERE $cond ORDER BY $post.id_post DESC";
-			return $this->db->select($sql);
-		}
 
 		//product
 		public function list_product_home($table_product){

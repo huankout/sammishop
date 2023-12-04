@@ -46,7 +46,7 @@
                   <div class="slider-galery ">
                      <div id="sync1" class="owl-carousel owl-theme">
                         <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/iphone.png" width="100%">
+                           <img src="<?php echo BASE_URL ?>public/images/<?php echo $detail['image_product'] ?>" width="100%">
                         </div>
                         <div class="item">
                            <img src="<?php echo BASE_URL ?>public/images/iphone1.jpg" width="100%">
@@ -57,7 +57,7 @@
                      </div>
                      <div id="sync2" class="owl-carousel owl-theme">
                         <div class="item">
-                           <img src="<?php echo BASE_URL ?>public/images/iphone.png" width="100%">
+                           <img src="<?php echo BASE_URL ?>public/images/<?php echo $detail['image_product'] ?>" width="100%">
                         </div>
                         <div class="item">
                            <img src="<?php echo BASE_URL ?>public/images/iphone1.jpg" width="100%">

@@ -34,6 +34,14 @@
 			$sql = "SELECT * FROM $post ORDER BY id_post DESC";
 			return $this->db->select($sql);
 		}
+		public function related_post_home($post,$table_post,$cond_related){
+			$sql = "SELECT * FROM $post,$table_post WHERE $cond_related ORDER BY id_post DESC";
+			return $this->db->select($sql);
+		}
+		public function details_post_home($table_post,$post,$cond){
+			$sql = "SELECT * FROM $table_post,$post WHERE $cond ORDER BY $post.id_post DESC";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>
