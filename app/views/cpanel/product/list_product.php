@@ -12,20 +12,17 @@
 <h2 style="text-align: center;">Liệt kê sản phẩm</h2>
 
 <table class="table table-striped">
-    <thead>
       <tr>
-        <th>ID</th>
-        <th>Tên</th>
-        <th>Ảnh</th>
-        <th>Danh mục</th>
-        <th>Giá</th>
-        <th>Số lượng</th>
-        <th>Mô tả</th>
-        <th>Sản phẩm hot</th>
-        <th>Quản lý</th>
+        <td><div class="col0">ID</div></td>
+        <td><div class="col0">Tên</div></td>
+        <td><div class="col0">Ảnh</div></td>
+        <td><div class="col0">Danh mục</div></td>
+        <td><div class="col0">Giá</div></td>
+        <td><div class="col0">Số lượng</div></td>
+        <td><div class="col0">Mô tả</div></td>
+        <td><div class="col0">Sản phẩm hot</div></td>
+        <td><div class="col0">Quản lý</div></td>
       </tr>
-    </thead>
-    <tbody>
       <?php
       $i = 0;
       foreach ($product as $key => $pro) {
