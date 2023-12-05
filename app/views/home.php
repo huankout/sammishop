@@ -15,9 +15,9 @@
             <div class="pro_all_gird">
                 <div class="girds_all list_all_other_page ">
                 <?php
-                     foreach($product_home as $key => $product){
-                        if ($product['product_hot'] == 1) {  
-                     ?>
+                    foreach($product_home as $key => $product){
+                    if ($product['product_hot'] == 1) {  
+                ?>
                     <div class="grids">
                         <form action="<?php echo BASE_URL ?>cart/addcart" method="POST">
                                 <input type ="hidden" value="<?php echo $product['id_product'] ?>" name ="product_id">

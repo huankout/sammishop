@@ -129,7 +129,7 @@
 			$data = array(
 				'title_post' => $title,				
 				'content_post' => $content,				
-				'image_post' => $image,
+				'image_post' => $unique_image,
 				'id_category_post' => $category
 
 			);
@@ -215,7 +215,7 @@
 				$data = array(
 				'title_post' => $title,				
 				'content_post' => $content,				
-				'image_post' => $image,
+				'image_post' => $unique_image,
 				'id_category_post' => $category
 				);
 				move_uploaded_file($tmp_image, $path_uploads);

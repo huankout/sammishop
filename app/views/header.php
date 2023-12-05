@@ -43,8 +43,8 @@
         <div class="info_top">
             <div class="bg_in">
                 <p class="p_infor">
-                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: sales@3tmobile.gmail</span>
-                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0923-032-992</span>
+                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: sammishop@gmail.com</span>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0123-456-789</span>
                 </p>
             </div>
         </div>
@@ -68,14 +68,14 @@
                                 <div class="hot_line_top">
                                     <span><b>Trụ sở chính</b></span>
                                     <br/>
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Triều Khúc</span>
                                 </div>
                             </div>
                             <div class="cols_50">
                                 <div class="hot_line_top">
                                     <span><b>Văn phòng chi nhánh</b></span>
                                     <br/>
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Triều Khúc</span>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -150,7 +150,19 @@
                                     </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Giỏ hàng</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Liên hệ</a></li>
+                                    <?php  
+                                        if (!Session :: get('customer')) {
+                                    ?>
                                     <li class=''><a href='<?php echo BASE_URL ?>user/user_login'>Đăng nhập</a></li>
+
+                                    <?php                                                                                                                            
+                                        }else{
+                                    ?>
+                                    <li class=''><a href='<?php echo BASE_URL ?>user/logout'>Đăng xuất</a></li>
+
+
+                                    <?php } ?>
+                                    <li class=''><a href='<?php echo BASE_URL ?>user/user_sign_up'>Đăng kí</a></li>
                                 </ul>
                             </div>
                         </div>

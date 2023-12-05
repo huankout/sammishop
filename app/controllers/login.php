@@ -39,8 +39,8 @@
 			$count = $loginModel->login($table_admin,$username,$password);
 
 			if ($count == '0') {
-				$message['msg'] = "sai tài khoản hoặc mk r thằng ngu ạ";
-				header("Location:".BASE_URL."login");
+				$message['msg'] = "sai tài khoản hoặc mật khẩu";
+				header("Location:".BASE_URL."login");				
 				
 			}else{
 				$result = $loginModel->getLogin($table_admin,$username,$password);

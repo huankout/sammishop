@@ -52,7 +52,7 @@
 				'product_hot' => $hot,
 				'desc_product' => $desc,
 				'quantity_product' => $quantity,
-				'image_product' => $image,
+				'image_product' => $unique_image,
 				'id_category_product' => $category
 
 			);
@@ -207,7 +207,7 @@
 				'product_hot' => $hot,
 				'desc_product' => $desc,
 				'quantity_product' => $quantity,
-				'image_product' => $image,
+				'image_product' => $unique_image,
 				'id_category_product' => $category
 				);
 				move_uploaded_file($tmp_image, $path_uploads);
@@ -258,6 +258,7 @@
 				header("Location:".BASE_URL."product/list_category?msg=".urlencode(serialize($message)));
 			}
 		}
+		
 	}
 
 ?>

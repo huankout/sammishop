@@ -50,5 +50,7 @@
 			$this->load->view('contact');
 			$this->load->view('footer');
 		}
+		
+		
 	}
 ?>

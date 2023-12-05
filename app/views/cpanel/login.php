@@ -158,15 +158,11 @@ html {
             <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <div id="remember" class="checkbox">
-                <label>
-                    <input type="checkbox" value="remember-me"> Ghi nhớ
-                </label>
+                
             </div>
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Đăng nhập</button>
         </form><!-- /form -->
-        <a href="#" class="forgot-password">
-            Quên mật khẩu
-        </a>
+        
     </div><!-- /card-container -->
 </div><!-- /container -->
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
