@@ -41,14 +41,16 @@
         <td><div class="col7"><textarea class="text7"><?php echo $pro['desc_product']; ?></textarea></div></td>
         
         <td>
-          <?php if ($pro['product_hot'] == 0) {
-                  echo 'Không';
-          }else {
-                  echo 'Có';
-          } 
+          <div class="col8">
+            <?php if ($pro['product_hot'] == 0) {
+                    echo 'Không';
+            }else {
+                    echo 'Có';
+            } 
           ?>
+          </div>
         </td>
-        <td><div class="col8"><a href="<?php echo BASE_URL ?>product/delete_product/<?php echo $pro['id_product'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>product/edit_product/<?php echo $pro['id_product'] ?>">Cập nhật</a></tr></td>
+        <td><div class="col9"><a href="<?php echo BASE_URL ?>product/delete_product/<?php echo $pro['id_product'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>product/edit_product/<?php echo $pro['id_product'] ?>">Cập nhật</a></tr></td>
       </tr>
       <?php } ?>
     </tbody>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
 <section>
    <div class="bg_in">
       <div class="content_page cart_page">
@@ -5,7 +6,7 @@
             <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                <li itemprop="itemListElement" itemscope
                   itemtype="http://schema.org/ListItem">
-                  <a itemprop="item" href=".">
+                  <a itemprop="item" href="<?php echo BASE_URL ?>">
                   <span itemprop="name">Trang chủ</span></a>
                   <meta itemprop="position" content="1" />
                </li>
@@ -32,7 +33,6 @@
                      <tr class="tr tr_first">
                         <th >Hình ảnh</th>
                         <th>Tên sản phẩm</th>
-                        <th>Mã sản phẩm</th>
                         <th >Giá</th>
                         <th style="width:100px;">Số lượng</th>
                         <th>Thành tiền</th>
@@ -40,52 +40,72 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <form action='./gio-hang/' method="post">
+                        <?php
+                           if(isset($_SESSION["shopping_cart"])){
+                              $total = 0;
+                        ?>
+                     <form action='<?php echo BASE_URL ?>cart/updatecart' method="POST">
+                        <?php
+                              foreach($_SESSION["shopping_cart"] as $key => $value){
+                                 $subtotal = $value['product_price'] * $value['product_quantity'];
+                                 $total += $subtotal;
+                        ?>
                         <tr class="tr">
                            <td data-th="Hình ảnh">
-                              <div class="col_table_image col_table_hidden-xs"><img src="public\images\iphone1.jpg" alt="Máy in laser Canon LBP251DW" class="img-responsive"/></div>
+                              <div class="col_table_image col_table_hidden-xs"><img src="<?php echo BASE_URL ?>public\images\<?php echo $value['product_image'] ?>" alt="<?php echo $value['product_title'] ?>" class="img-responsive"/></div>
                            </td>
                            <td data-th="Sản phẩm">
                               <div class="col_table_name">
-                                 <h4 class="nomargin">Iphone 1</h4>
+                                 <h4 class="nomargin"><?php echo $value['product_title'] ?></h4>
                               </div>
                            </td>
-                           <td data-th="Mã sản phẩm">
-                              <div class="col_table_name">
-                                 <h4 class="nomargin">Iphone 1</h4>
-                              </div>
-                           </td>
-                           <td data-th="Giá"><span class="color_red font_money">0</span></td>
+                           <td data-th="Giá"><span class="color_red font_money"><?php echo number_format($value['product_price'], '0', ',', '.') . 'đ'; ?></span></td>
                            <td data-th="Số lượng">
                               <div class="clear margintop5">
-                                 <div class="floatleft"><input type="number" class="inputsoluong" name="qty[576]"  value="1"></div>
-                                 <input type="hidden" name="check" value="999">
-                                 <div class="floatleft width50">
-                                    <button class="btn_df btn_table_td_rf_del btn-sm">
-                                    <i class="fa fa-refresh"></i></button>
-                                 </div>
+                                 <div class="floatleft"><input type="number" class="inputsoluong" name="qty[<?php echo $value['product_id'] ?>]"  value="<?php echo $value['product_quantity'] ?>"></div>
                               </div>
                               <div class="clear"></div>
                            </td>
-                           <td data-th="Thành tiền" class="text_center"><span class="color_red font_money">0 đ</span></td>
-                           <td class="actions aligncenter" data-th="">
-                              <a onclick="return del(576,'Máy in laser Canon LBP251DW');" class="btn_df btn_table_td_rf_del btn-sm"><i class="fa fa-trash-o"></i> <span class="display_mobile">Xóa sản phẩm</span></a>                          
+                           <td data-th="Thành tiền" class="text_center"><span class="color_red font_money"><?php echo number_format($subtotal, '0', ',', '.') . 'đ'; ?></span></td>
+                           <td class="actions aligncenter">
+                              <button type="submit" style="box-shadow: none" value="<?php echo $value['product_id'] ?>" name="delete_cart" class="btn btn-sm btn-warning">Xoá</button>                
+                              <button type="submit" style="box-shadow: none" value="<?php echo $value['product_id'] ?>" name="update_cart" class="btn btn-sm btn-primary">Cập Nhật</button>                
                            </td>
                         </tr>
+                        <?php
+                           } if($total != 0){
+                        ?>
+                        
+                        <tr>
+                           <td colspan="7" class="textright_text">
+                              <div class="sum_price_all">
+                                 <span class="text_price">Tổng tiền thành toán</span>: 
+                                 <span class="text_price color_red"><?php echo number_format($total, '0', ',', '.') . ' đ'; ?></span>
+                              </div>
+                           </td>
+                        </tr>
+
+                     <?php
+                           }else{
+                     ?>
+                        <tr>
+                           <td colspan="7" class="textright_text">
+                              <div class="sum_price_all">
+                                 <span class="text_price" style="color:red">Giỏ hàng trống</span>
+                              </div>
+                           </td>
+                        </tr>
+                     <?php
+                           }
+                        }
+                        ?>
                      </form>
-                     <tr>
-                        <td colspan="7" class="textright_text">
-                           <div class="sum_price_all">
-                              <span class="text_price">Tổng tiền thành toán</span>: 
-                              <span class="text_price color_red">0 đ</span>
-                           </div>
-                        </td>
-                     </tr>
+                     
                   </tbody>
                   <tfoot>
                      <tr class="tr_last">
                         <td colspan="7">
-                           <a href="." class="btn_df btn_table floatleft"><i class="fa fa-long-arrow-left"></i> Tiếp tục mua hàng</a>
+                           <a href="<?php echo BASE_URL ?>" class="btn_df btn_table floatleft"><i class="fa fa-long-arrow-left"></i> Tiếp tục mua hàng</a>
                            <div class="clear"></div>
                         </td>
                      </tr>
@@ -118,12 +138,12 @@
                <div class="contact_right">
                   <div class="form_contact_in">
                      <div class="box_contact">
-                        <form name="FormDatHang" method="post" action="gio-hang/" >
+                        <form name="FormDatHang" method="POST" autocomplete="off" action="<?php echo BASE_URL ?>cart/order" >
                            <div class="content-box_contact">
                               <div class="row">
                                  <div class="input">
                                     <label>Họ và tên: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtHoTen" required class="clsip">
+                                    <input type="text" name="name" required class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -131,7 +151,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Số điện thoại: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtDienThoai" required onkeydown="return checkIt(event)" class="clsip">
+                                    <input type="text" name="phone" required onkeydown="return checkIt(event)" class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -139,7 +159,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Địa chỉ: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtDiaChi" required class="clsip" >
+                                    <input type="text" name="address" required class="clsip" >
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -147,7 +167,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Email: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtEmail" onchange="return KiemTraEmail(this);" required class="clsip">
+                                    <input type="text" name="email" onchange="return KiemTraEmail(this);" required class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -155,7 +175,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Nội dung: <span style="color:red;">*</span></label>
-                                    <textarea type="text" name="txtNoiDung" class="clsipa"></textarea>
+                                    <textarea type="text" name="order_desc" class="clsipa"></textarea>
                                  </div>
                                  <div class="clear"></div>
                               </div>
