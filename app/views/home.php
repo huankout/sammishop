@@ -22,7 +22,6 @@
                         if ($product['product_hot'] == 1) {  
                      ?>
                     <div class="grids">
-<<<<<<< HEAD
                         <div class="grids_in">
                             <div class="content">
                                 <div class="img-right-pro">
@@ -50,7 +49,6 @@
                                         <span
                                             class="news_price"><?php echo number_format($product['price_product'],0,'','.') ?>
                                             đ </span>
-=======
                         <form action="<?php echo BASE_URL ?>cart/addcart" method="POST">
                                 <input type ="hidden" value="<?php echo $product['id_product'] ?>" name ="product_id">
                                 <input type ="hidden" value="<?php echo $product['title_product'] ?>" name ="product_title">
@@ -80,7 +78,7 @@
                                         </a>
                                     </div>
                                     <div class="add_card">
-                                    <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
+                                        <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
                                     </div>
                                     <div class="price_old_new">
                                         <div class="price">
@@ -88,7 +86,6 @@
                                                 class="news_price"><?php echo number_format($product['price_product'],0,'','.') ?>
                                                 đ </span>
                                         </div>
->>>>>>> dath
                                     </div>
                                 </div>
                             </div>
