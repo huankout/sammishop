@@ -13,15 +13,15 @@
 
 <table class="table table-striped">
       <tr>
-        <td><div class="col0">ID</div></td>
-        <td><div class="col0">Tên</div></td>
-        <td><div class="col0">Ảnh</div></td>
-        <td><div class="col0">Danh mục</div></td>
-        <td><div class="col0">Giá</div></td>
-        <td><div class="col0">Số lượng</div></td>
-        <td><div class="col0">Mô tả</div></td>
-        <td><div class="col0">Sản phẩm hot</div></td>
-        <td><div class="col0">Quản lý</div></td>
+        <th><div class="th-container"><div class="col0">ID</div></div></th>
+        <th><div class="th-container"><div class="col0">Tên</div></div></th>
+        <th><div class="th-container"><div class="col0">Ảnh</div></div></th>
+        <th><div class="th-container"><div class="col0" style="width:100px">Danh mục</div></div></th>
+        <th><div class="th-container"><div class="col0">Giá</div></div></th>
+        <th><div class="th-container"><div class="col0" style="width:100px">Số lượng</div></div></th>
+        <th><div class="th-container"><div class="col0">Mô tả</div></div></th>
+        <th><div class="th-container"><div class="col0">Sản phẩm hot</div></div></th>
+        <th><div class="th-container"><div class="col0">Quản lý</div></div></th>
       </tr>
       <?php
       $i = 0;
