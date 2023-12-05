@@ -71,7 +71,7 @@
 			}
 
 			$cond_related = "$table_product.id_category_product = $table.id_category_product AND $table_product.id_category_product='$id_cate' AND $table_product.id_product != '$id'";
-			$data['related'] = $categorymodel->related_product_home($table,$table_product,$cond_related);
+			$data['related'] = $productmodel->related_product_home($table,$table_product,$cond_related);
 
 			$this->load->view('header', $data);
 			// $this->load->view('slider');

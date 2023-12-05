@@ -47,8 +47,8 @@
                                     <div class="img-right-pro">
                                         <a href="sanpham.php">
                                             <img class="lazy img-pro content-image"
-                                                src="<?php echo BASE_URL ?>public/images/<?php echo $product['image_product'] ?>"
-                                                data-original="<?php echo BASE_URL?>public/images/<?php echo $product['image_product'] ?>"
+                                                src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
+                                                data-original="<?php echo BASE_URL?>public/uploads/product/<?php echo $product['image_product'] ?>"
                                                 alt="nhìn cái chó gì" />
                                         </a>
                                         <div class="content-overlay"></div>

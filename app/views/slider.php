@@ -4,18 +4,22 @@
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <?php foreach($post_index as $key => $pos){
+                        echo '<li data-target="#myCarousel" data-slide-to="'.$key.'"'; 
+                        if($key==0) echo 'class="active">';
+                        echo '</li>';
+                     } ?>
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        
-                        <div class="item active">
-                            <img src="<?php echo BASE_URL ?>public/uploads/post/<?php echo $post['image_post']?>" alt="Siêu khuyến mãi">
-                        </div>
+                    <div class="carousel-inner" style="height:375px">
+                        <?php foreach($post_index as $key => $pos){
 
+                         
+                        echo '<div class="item'; if($key==0) echo ' active'; echo '">';
+                        echo    '<img src="'.BASE_URL.'public/uploads/post/'.$pos['image_post'].'" alt="'.'Siêu khuyến mãi">';
+                        echo '</div>';
+                         } ?>
                         
                     </div>
 
@@ -43,7 +47,7 @@
                                 </div>
                                 <div class="col-md-8 col-xs-8 col-sm-8">
                                     <h4><?php echo $post['title_post'] ?></h4>
-                                    <p><?php echo $post['content_post'] ?></p>
+                                    <p><?php echo substr($post['content_post'],0,100) ?></p>
                                 </div>
                             </div>
                             <hr>

@@ -69,7 +69,7 @@
                               <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
                            </div>
                            <div class="color_price">
-                              <span class="title_price bg_green">Giá bán</span> <?php echo number_format($detail['price_product'], '0', ',', '.') . 'Đ'; ?> <span>vnđ</span>.
+                              <span class="title_price bg_green">Giá bán</span> <?php echo number_format($detail['price_product'], '0', ',', '.') ; ?> <span>đ</span>.
                               <div class="clear"></div>
                            </div>
                         </div>
@@ -132,9 +132,9 @@
                      <div class="bx-contact">
                         <span class="title-cnt">Bạn cần hỗ trợ?</span> 
                         <p>Chat với chúng tôi :</p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo BASE_URL ?>public\images\icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo BASE_URL ?>public\images\icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo BASE_URL ?>public\images\icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                         <!--<div class="sup-item item1">
                            <div>
                            
