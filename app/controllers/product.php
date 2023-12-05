@@ -57,7 +57,7 @@
 
 			);
 
-			$productmodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
 			$result = $productmodel->insert_product($table, $data);
 
 			if ($result == 1) {
@@ -99,8 +99,8 @@
 			$table_product = "tbl_product";
 			$table_category = "tbl_category_product";
 
-			$categorymodel = $this->load->model('categorymodel');
-			$data['product'] = $categorymodel->product($table_product, $table_category);
+			$productmodel = $this->load->model('productmodel');
+			$data['product'] = $productmodel->product($table_product, $table_category);
 
 			$this->load->view('cpanel/product/list_product', $data);
 			$this->load->view('cpanel/footer');
@@ -121,8 +121,8 @@
 		public function delete_product($id){
 			$table = "tbl_product";
 			$cond = "id_product='$id'";
-			$categorymodel = $this->load->model('categorymodel');
-			$result = $categorymodel->delete_product($table,$cond);
+			$productmodel = $this->load->model('productmodel');
+			$result = $productmodel->delete_product($table,$cond);
 			if ($result == 1) {
 				$message['msg'] = "xóa sản phẩm thành công";
 				header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
@@ -162,9 +162,9 @@
 			$table = "tbl_product";
 			$table_category = "tbl_category_product";
 			$cond = "id_product='$id'";
-			$categorymodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
 
-			$data['productbyid'] = $categorymodel->productbyid($table,$cond);
+			$data['productbyid'] = $productmodel->productbyid($table,$cond);
 			
 			$data['category'] = $categorymodel->category($table_category);
 			$this->load->view('cpanel/header');
