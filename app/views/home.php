@@ -10,9 +10,6 @@
             <div class="box-title">
                 <div class="title-bar">
                     <h1>Sản phẩm HOT</h1>
-                    <a class="read_more" href="<?php echo BASE_URL ?>user_product/product_hot">
-                        Xem thêm
-                    </a>
                 </div>
             </div>
             <div class="pro_all_gird">
@@ -22,33 +19,6 @@
                         if ($product['product_hot'] == 1) {  
                      ?>
                     <div class="grids">
-                        <div class="grids_in">
-                            <div class="content">
-                                <div class="img-right-pro">
-                                    <a href="sanpham.php">
-                                        <img class="lazy img-pro content-image"
-                                            src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
-                                            data-original="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
-                                             />
-                                    </a>
-                                    <div class="content-overlay"></div>
-                                </div>
-                                <div class="name-pro-right">
-                                    <a
-                                        href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
-                                        <h3><?php echo $product['title_product'] ?></h3>
-                                    </a>
-                                </div>
-                                <div class="add_card">
-                                    <a onclick="return giohang(579);">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                                    </a>
-                                </div>
-                                <div class="price_old_new">
-                                    <div class="price">
-                                        <span
-                                            class="news_price"><?php echo number_format($product['price_product'],0,'','.') ?>
-                                            đ </span>
                         <form action="<?php echo BASE_URL ?>cart/addcart" method="POST">
                                 <input type ="hidden" value="<?php echo $product['id_product'] ?>" name ="product_id">
                                 <input type ="hidden" value="<?php echo $product['title_product'] ?>" name ="product_title">
@@ -131,9 +101,9 @@
                                 <div class="img-right-pro">
                                     <a href="sanpham.php">
                                         <img class="lazy img-pro content-image"
-                                            src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $pro_cate['image_product'] ?>"
-                                            data-original="<?php echo BASE_URL ?>public/uploads/product/<?php echo $pro_cate['image_product'] ?>"
-                                             />
+                                            src="<?php echo BASE_URL ?>public/images/<?php echo $pro_cate['image_product'] ?>"
+                                            data-original="<?php echo BASE_URL?>public/images/<?php echo $pro_cate['image_product'] ?>"
+                                            alt="nhìn cái chó gì" />
                                     </a>
                                     <div class="content-overlay"></div>
         

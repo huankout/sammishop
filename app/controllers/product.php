@@ -57,8 +57,8 @@
 
 			);
 
-			$categorymodel = $this->load->model('categorymodel');
-			$result = $categorymodel->insert_product($table, $data);
+			$productmodel = $this->load->model('categorymodel');
+			$result = $productmodel->insert_product($table, $data);
 
 			if ($result == 1) {
 				move_uploaded_file($tmp_image, $path_uploads);
