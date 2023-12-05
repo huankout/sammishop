@@ -13,10 +13,11 @@
 			$table = 'tbl_category_product';
 			$table_product =  'tbl_product';
 			$categorymodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
 			$data['category'] = $categorymodel->category_home($table);
 			$table_post = 'tbl_category_post';
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
-			$data['list_product'] = $categorymodel->list_product_home($table_product);
+			$data['list_product'] = $productmodel->list_product_home($table_product);
 
 			$this->load->view('header', $data);
 			// $this->load->view('slider');
@@ -27,10 +28,11 @@
 			$table = 'tbl_category_product';
 			$table_product =  'tbl_product';
 			$categorymodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
 			$data['category'] = $categorymodel->category_home($table);
 			$table_post = 'tbl_category_post';
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
-			$data['product_hot'] = $categorymodel->list_product_index($table_product);
+			$data['product_hot'] = $productmodel->list_product_index($table_product);
 
 			// $this->load->view('slider');
 			$this->load->view('header', $data);
@@ -58,10 +60,11 @@
 			$cond = "$table_product.id_category_product = $table.id_category_product AND $table_product.id_product='$id'";
 			
 			$categorymodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
 
 			$data['category'] = $categorymodel->category_home($table);
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
-			$data['detail_product'] = $categorymodel->detail_product_home($table,$table_product,$cond);
+			$data['detail_product'] = $productmodel->detail_product_home($table,$table_product,$cond);
 
 			foreach($data['detail_product'] as $key => $cate){
 				$id_cate = $cate['id_category_product'];

@@ -176,7 +176,7 @@
 		public function update_product($id){
 
 			$table = "tbl_product";
-			$categorymodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
 			$cond = "id_product='$id'";
 
 			$hot = $_POST['product_hot'];
@@ -195,7 +195,7 @@
 
 			if ($image) {
 				
-				$data['productbyid'] = $categorymodel->productbyid($table,$cond);
+				$data['productbyid'] = $productmodel->productbyid($table,$cond);
 				foreach ($data['productbyid'] as $key => $value) {
 					
 					$path_unlink = "public/uploads/product/";
@@ -224,7 +224,7 @@
 			);
 			}
 
-			$result = $categorymodel->updateproduct($table, $data, $cond);
+			$result = $productmodel->updateproduct($table, $data, $cond);
 
 			if ($result == 1) {
 

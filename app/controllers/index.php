@@ -16,10 +16,12 @@
 			$table_product = 'tbl_product';
 			$post = 'tbl_post';
 			$categorymodel = $this->load->model('categorymodel');
+			$productmodel = $this->load->model('productmodel');
+			$postmodel = $this->load->model('postmodel');
 			$data['category'] = $categorymodel->category_home($table);
 			$data['category_post'] = $categorymodel->categorypost_home($table_post);
-			$data['product_home'] = $categorymodel->list_product_index($table_product);
-			$data['post_index'] = $categorymodel->post_index($post);
+			$data['product_home'] = $productmodel->list_product_index($table_product);
+			$data['post_index'] = $postmodel->post_index($post);
 			
 
 			$this->load->view('header', $data);
