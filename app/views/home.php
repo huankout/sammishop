@@ -1,3 +1,4 @@
+
 <section>
     <div class="bg_in">
         <!-- <style type="text/css">
@@ -47,7 +48,7 @@
                                         </a>
                                     </div>
                                     <div class="add_card">
-                                    <input type="submit" class="btn btn-success" name="addcart" value ="Đặt hàng">
+                                    <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
                                     </div>
                                     <div class="price_old_new">
                                         <div class="price">
@@ -85,6 +86,12 @@
                         foreach ($product_home as $key => $pro_cate) {
                             if ($cate['id_category_product'] == $pro_cate['id_category_product']) {
                     ?>
+                    <form action="<?php echo BASE_URL ?>cart/addcart" method="POST">
+                                <input type ="hidden" value="<?php echo $pro_cate['id_product'] ?>" name ="product_id">
+                                <input type ="hidden" value="<?php echo $pro_cate['title_product'] ?>" name ="product_title">
+                                <input type ="hidden" value="<?php echo $pro_cate['image_product'] ?>" name ="product_image">
+                                <input type ="hidden" value="<?php echo $pro_cate['price_product'] ?>" name ="product_price">
+                                <input type ="hidden" value="1" name ="product_quantity">
                     <div class="grids">
                         <div class="grids_in">
                             <div class="content">
@@ -105,9 +112,7 @@
                                     </a>
                                 </div>
                                 <div class="add_card">
-                                    <a onclick="return giohang(579);">
-                                        <input type="submit" class="btn btn-success" name="addcart" value ="Đặt hàng">
-                                    </a>
+                                    <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
                                 </div>
                                 <div class="price_old_new">
                                     <div class="price">
@@ -119,6 +124,7 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                     <?php
                             }
                         }

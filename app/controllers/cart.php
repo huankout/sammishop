@@ -21,8 +21,51 @@
 			$this->load->view('cart');
 			$this->load->view('footer');
 		}
+		public function order(){
+			Session::init();
+			$table_order = 'tbl_order';
+			$table_order_details = 'tbl_order_details';
+			$ordermodel = $this->load->model('ordermodel');
+
+			$name = $_POST["name"];
+			$phone = $_POST["phone"];
+			$address = $_POST["address"];
+			$email = $_POST["email"];
+			$order_desc = $_POST["order_desc"];
+			$order_code = rand(0,9999);
+
+			date_default_timezone_set('asia/ho_chi_minh');
+			$date = date("d/m/Y");
+			$hour = date("h:i:sa");
+			$order_date = $date.$hour;
+
+			$data_order = array(
+				'order_status' => 'moi',
+				'order_code' => $order_code,
+				'order_date' => $date.' '.$hour,
+			);
+			$result_order = $ordermodel->insert_order($table_order,$data_order);
+
+			if(Session::get("shopping_cart")==true){
+				foreach(Session::get("shopping_cart") as $key => $value){
+					$data = array(
+						'order_code' => $order_code,
+						'product_id' => $value['product_id'],
+						'product_quantity' => $value['product_quantity'],
+						'name' => $name,
+						'phone' => $phone,
+						'address' => $address,
+						'email' => $email,
+						'order_desc' => $order_desc,
+					);
+					$result_order = $ordermodel->insert_order_details($table_order_details,$data);
+				}
+				
+			}
+		}
 		public function addcart(){
 			Session::init();
+			// Session::destroy();
 			
 			if(isset($_SESSION["shopping_cart"])){
 				$available = 0;
@@ -54,19 +97,30 @@
 			}
 			header("Location:".BASE_URL.'cart');
 		}
-		public function deletecart(){
+		public function updatecart(){
 			Session::init();
-			if(isset($_SESSION["shopping_cart"])){
-				foreach($_SESSION["shopping_cart"] as $key => $value){
-					if($value['product_id'] == $_POST['delete_id']){
-						
+			// Session::destroy();
+			if(isset($_POST['delete_cart'])){
+				if(isset($_SESSION["shopping_cart"])){
+					foreach($_SESSION["shopping_cart"] as $key => $value){
+						if($_SESSION["shopping_cart"][$key]['product_id'] == $_POST['delete_cart']){
+							unset($_SESSION["shopping_cart"][$key]);
+						}
+					}
+					header("Location:".BASE_URL.'cart');
+				}
+			}else if(isset($_POST['update_cart'])){
+				foreach($_POST['qty'] as $key => $qty)
+				foreach($_SESSION["shopping_cart"] as $session => $value){
+					if($value['product_id'] == $key && $qty >= 1){
+						$_SESSION["shopping_cart"][$session]['product_quantity'] = $qty;
+					}elseif($value['product_id'] == $key && $qty <=0){
 						unset($_SESSION["shopping_cart"][$key]);
 					}
 				}
 				header("Location:".BASE_URL.'cart');
-			}else{
-				header("Location:".BASE_URL);
-			}
+			}else 
+			header("Location:".BASE_URL);
 		}
     }
 ?>

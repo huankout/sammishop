@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
 <section>
    <div class="bg_in">
       <div class="content_page cart_page">
@@ -32,7 +33,6 @@
                      <tr class="tr tr_first">
                         <th >Hình ảnh</th>
                         <th>Tên sản phẩm</th>
-                        <th>Mã sản phẩm</th>
                         <th >Giá</th>
                         <th style="width:100px;">Số lượng</th>
                         <th>Thành tiền</th>
@@ -62,15 +62,14 @@
                            <td data-th="Giá"><span class="color_red font_money"><?php echo number_format($value['product_price'], '0', ',', '.') . 'đ'; ?></span></td>
                            <td data-th="Số lượng">
                               <div class="clear margintop5">
-                                 <div class="floatleft"><input type="number" min ="1" class="inputsoluong" name="qty[<?php echo $value['product_id'] ?>]"  value="<?php echo $value['product_quantity'] ?>"></div>
+                                 <div class="floatleft"><input type="number" class="inputsoluong" name="qty[<?php echo $value['product_id'] ?>]"  value="<?php echo $value['product_quantity'] ?>"></div>
                               </div>
                               <div class="clear"></div>
                            </td>
                            <td data-th="Thành tiền" class="text_center"><span class="color_red font_money"><?php echo number_format($subtotal, '0', ',', '.') . 'đ'; ?></span></td>
                            <td class="actions aligncenter">
-                              <input type="hidden" value="<?php echo $value['product_id'] ?>" name="delete_id">
-                              <input type="submit" style="box-shadow: none" value="Xoá" name="deletecart" class="btn btn-sm btn-warning">                  
-                              <input type="submit" style="box-shadow: none" value="Cập nhật" name="updatecart" class="btn btn-sm btn-primary">                  
+                              <button type="submit" style="box-shadow: none" value="<?php echo $value['product_id'] ?>" name="delete_cart" class="btn btn-sm btn-warning">Xoá</button>                
+                              <button type="submit" style="box-shadow: none" value="<?php echo $value['product_id'] ?>" name="update_cart" class="btn btn-sm btn-primary">Cập Nhật</button>                
                            </td>
                         </tr>
                         <?php
@@ -87,7 +86,18 @@
                         </tr>
 
                      <?php
-                           }}
+                           }else{
+                     ?>
+                        <tr>
+                           <td colspan="7" class="textright_text">
+                              <div class="sum_price_all">
+                                 <span class="text_price" style="color:red">Giỏ hàng trống</span>
+                              </div>
+                           </td>
+                        </tr>
+                     <?php
+                           }
+                        }
                         ?>
                      </form>
                      
@@ -128,12 +138,12 @@
                <div class="contact_right">
                   <div class="form_contact_in">
                      <div class="box_contact">
-                        <form name="FormDatHang" method="post" action="gio-hang/" >
+                        <form name="FormDatHang" method="POST" autocomplete="off" action="<?php echo BASE_URL ?>cart/order" >
                            <div class="content-box_contact">
                               <div class="row">
                                  <div class="input">
                                     <label>Họ và tên: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtHoTen" required class="clsip">
+                                    <input type="text" name="name" required class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -141,7 +151,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Số điện thoại: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtDienThoai" required onkeydown="return checkIt(event)" class="clsip">
+                                    <input type="text" name="phone" required onkeydown="return checkIt(event)" class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -149,7 +159,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Địa chỉ: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtDiaChi" required class="clsip" >
+                                    <input type="text" name="address" required class="clsip" >
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -157,7 +167,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Email: <span style="color:red;">*</span></label>
-                                    <input type="text" name="txtEmail" onchange="return KiemTraEmail(this);" required class="clsip">
+                                    <input type="text" name="email" onchange="return KiemTraEmail(this);" required class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -165,7 +175,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Nội dung: <span style="color:red;">*</span></label>
-                                    <textarea type="text" name="txtNoiDung" class="clsipa"></textarea>
+                                    <textarea type="text" name="order_desc" class="clsipa"></textarea>
                                  </div>
                                  <div class="clear"></div>
                               </div>
