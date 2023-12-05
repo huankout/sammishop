@@ -150,6 +150,7 @@
                                     </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Giỏ hàng</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Liên hệ</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL ?>user/user_login'>Đăng nhập</a></li>
                                 </ul>
                             </div>
                         </div>
