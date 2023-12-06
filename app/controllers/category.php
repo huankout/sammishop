@@ -44,12 +44,22 @@
 			$table_category_product = 'tbl_category_product';
 			$title = $_POST['title'];
 			$desc = $_POST['description'];
-			$data = array(
-				'title_category_product' => $title,
-				'desc_category_product' => $desc
+
+			if (!is_int($_POST(['title']))) {
+				$data = array(
+					'title_category_product' => $title,
+					'desc_category_product' => $desc
+	
+	
+				);
+			}
+
+			// $data = array(
+			// 	'title_category_product' => $title,
+			// 	'desc_category_product' => $desc
 
 
-			);
+			// );
 			$result = $categorymodel->insertcategory($table_category_product, $data);
 
 			if ($result == 1){

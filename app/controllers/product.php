@@ -166,7 +166,7 @@
 
 			$data['productbyid'] = $productmodel->productbyid($table,$cond);
 			
-			$data['category'] = $categorymodel->category($table_category);
+			$data['category'] = $productmodel->category($table_category);
 			$this->load->view('cpanel/header');
 			$this->load->view('cpanel/menu');
 			$this->load->view('cpanel/product/edit_product',$data);
