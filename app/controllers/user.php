@@ -91,7 +91,7 @@
 				'customer_email' => $email,
 				'customer_phone' => $phone,
 				'customer_address' => $address,
-				'customer_password' => md5($password),
+				'customer_password' => $password,
 
 			);
 
