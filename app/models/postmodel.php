@@ -42,6 +42,10 @@
 			$sql = "SELECT * FROM $table_post,$post WHERE $cond ORDER BY $post.id_post DESC";
 			return $this->db->select($sql);
 		}
+		public function post_index($post){
+			$sql = "SELECT * FROM $post ORDER BY id_post DESC LIMIT 5";
+			return $this->db->select($sql);
+		}
 	}
 
 ?>
