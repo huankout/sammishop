@@ -53,7 +53,7 @@
                 <div class="header_top">
                     <div class="bg_in">
                         <div class="logo">
-                            <a href="<?php echo BASE_URL ?>"><img src="<?php echo BASE_URL ?>public/images/logohere.jpeg" width="250" height="100" alt="logohere.jpeg" /></a>
+                            <a href="<?php echo BASE_URL ?>"><img src="<?php echo BASE_URL ?>public/images/sammilogo.png" width="250" height="100" style="object-fit: contain" alt="logohere.jpeg" /></a>
                         </div>
                         <nav class="menu_top">
                             <form class="search_form" method="get" action="">

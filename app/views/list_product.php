@@ -46,15 +46,14 @@
                         </div> -->
                      </div>
                      <div class="name-pro-right">
-                     <a href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
-                           <h3><?php echo $product['title_product'] ?></h3>
-                        </a>
+                              <a
+                                            href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
+                                            <h3 class="title_product"><?php echo $product['title_product'] ?></h3>
+                                        </a>
                      </div>
                      <div class="add_card">
-                        <a onclick="return giohang(579);">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                        </a>
-                     </div>
+                                        <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
+                                    </div>
                      <div class="price_old_new">
                         <div class="price">
                            <span class="news_price"><?php echo number_format($product['price_product'],0,'','.') ?> đ </span>

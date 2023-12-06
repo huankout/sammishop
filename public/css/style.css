@@ -347,7 +347,7 @@ html[xmlns] .flexslider .slides {
 }
 .flex-direction-nav a>i.fa {
     font-style: normal;
-    color: #ffbf00
+    color: #e5677d
 }
 .flex-direction-nav a:before {
     font-family: flexslider-icon;
@@ -712,7 +712,7 @@ header .logo a img {
     text-align: center;
     padding: 10px;
     color: #fff;
-    background: #ffbf00;
+    background: #e5677d;
     font-size: 16px;
     cursor: pointer;
 }
@@ -832,7 +832,7 @@ img::selection {
     padding-left: 15px;
 }
 .menu_dropdown li.parent ul li:hover a {
-    color: #ffbf00;
+    color: #e5677d;
 }
 .menu_dropdown li strong.opened:before {
     content: "\f107";
@@ -877,7 +877,7 @@ li.parent.display_none_more strong {
     height: 40px;
     outline: none;
     padding: 5px 30px 5px 10px;
-    border: 1px solid #ffbf00;
+    border: 1px solid #e5677d;
 }
 .searchButton {
     position: absolute;
@@ -886,7 +886,7 @@ li.parent.display_none_more strong {
     width: 40px;
     height: 34px;
     opacity: 1;
-    background: #ffbf00;
+    background: #e5677d;
     cursor: pointer;
     border: 0px;
     color: #fff;
@@ -903,11 +903,11 @@ li.parent.display_none_more strong {
     height: 40px;
     width: 164px;
     outline: none;
-    border: 3px solid #ffbf00;
-    border-right: 1px solid #ffbf00;
+    border: 3px solid #e5677d;
+    border-right: 1px solid #e5677d;
 }
 .btn_menu_search {
-    background: #ffbf00;
+    background: #e5677d;
     margin: 0 auto;
     width: 100%;
     position: relative;
@@ -1041,7 +1041,7 @@ div#cssmenu_flyout ul ul {
 }
 #cssmenu_flyout>ul li:hover>a,
 #cssmenu_flyout>ul li>a:hover {
-    color: #ffbf00
+    color: #e5677d
 }
 #cssmenu_flyout>ul .has-sub>a::after {
     content: "\f105";
@@ -1086,7 +1086,7 @@ div#cssmenu_flyout ul ul {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border: 5px solid #ffbf00;
+    border: 5px solid #e5677d;
     border-left: 0;
     border-top: 0
 }
@@ -1138,7 +1138,7 @@ position: absolute;
     top: 5px;
     right: 6px;
     font-style: italic;
-    background: #ffbf00;
+    background: #e5677d;
     padding: 3px 5px;
     color: #fff;
     font-size: 14px;
@@ -1153,13 +1153,13 @@ content: "";
     height: 0;
     left: 15px;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #ffbf00;
+    border-left: 15px solid #e5677d;
     border-right: 0 solid transparent;
     border-top: 0 solid transparent;
 }
 
 .box-title .title-bar {
-    border-bottom: 1px solid #ffd500;
+    border-bottom: 1px solid #e5677d;
 }
 .box-title h2,
 .box-title h3,
@@ -1172,7 +1172,7 @@ content: "";
     text-align: center;
     padding: 0 30px;
     font-size: 18px;
-    color: #ffbf00;
+    color: #e5677d;
     text-transform: uppercase;
 }
 .module_pro_all {
@@ -1193,7 +1193,8 @@ content: "";
     -webkit-box-sizing: border-box;
 }
 .grids_in {
-    border: 1px solid #ffbf00;
+    border: 1px solid #e5677d;
+    width: ;
 }
 .name-pro-right {
     width: auto;
@@ -1330,7 +1331,7 @@ content: "";
     right: 30px;
     font-size: 34px;
     cursor: pointer;
-    background: #ffbf00;
+    background: #e5677d;
     width: 40px;
     height: 40px;
     border: 1px solid #fff;
@@ -1345,7 +1346,7 @@ content: "";
 .info_top span i.fa {
     padding: 2px 5px;
     border-radius: 5px;
-    color: #ffbf00;
+    color: #e5677d;
 }
 .info_top span {
     font-size: 14px;
@@ -1355,7 +1356,7 @@ content: "";
     min-height: 62px;
 }
 footer {
-    background-color: #ffbf00;
+    background-color: #e5677d;
     padding: ;
 }
 .footer {
@@ -1820,7 +1821,7 @@ input.btn-gui {
 }
 .wp_page>.page a:hover,
 .wp_page>.page a.active {
-    background: #ffbf00;
+    background: #e5677d;
     color: #fff;
     font-weight: bold;
 }
@@ -2071,7 +2072,7 @@ ul.tabs li a {
     font-size: 16px;
     padding: 10px 15px;
     outline: none;
-    background: #ffbf00;
+    background: #e5677d;
 }
 ul.tabs li a:hover {
     background: #a7a9ac;
@@ -2083,7 +2084,7 @@ html ul.tabs li.active a {
     background: #58585a;
 }
 .tab_container {
-    border: 1px solid #ffbf00;
+    border: 1px solid #e5677d;
     margin-top: -1px;
     clear: both;
     float: left;
@@ -2395,7 +2396,7 @@ h4.nomargin {
 }
 .info_top span {
     display: inline-block;
-    color: #ffbf00;
+    color: #e5677d;
 }
 .menu_left {
     font-size: 15px;
@@ -2412,7 +2413,7 @@ h4.nomargin {
 .title-bar h2,
 .title-bar h1 {
     padding: 6px 10px;
-    background: #ffbf00;
+    background: #e5677d;
     color: #fff;
     position: relative;
 }
@@ -2428,7 +2429,7 @@ position: absolute;
     border-bottom: 0px solid transparent;
     border-top: 40px solid transparent;
     border-right: 0 solid transparent;
-    border-left: 35px solid #ffd500;
+    border-left: 35px solid #e5677d;
 }
 .slider_our {
     margin-bottom: 30px;
@@ -2481,7 +2482,7 @@ ul.social li a.gl i.fa {
     background:#DD4E42;
 }
 ul.social li a.yt i.fa {
-    background:#ffbf00;
+    background:#e5677d;
 }
 ul.social li a.tw i.fa {
     background:#55ACEE;
@@ -2528,7 +2529,7 @@ ul.social li a:hover i.fa {
 }
 .title_module {
     padding:5px 10px;
-    background:#ffbf00;
+    background:#e5677d;
     text-align:left;
 }
 .title_module h3 {
@@ -2689,7 +2690,7 @@ ul.list_ul_new_girds .span7.image_top.class_no_child {
 a.support_online {
     padding:10px;
     cursor:pointer;
-    background:#ffbf00;
+    background:#e5677d;
     border-radius:0 0 5px 5px;
     margin-left:20px;
     text-transform:uppercase;
@@ -2889,7 +2890,7 @@ p.note_mst {
 .footer_top_bootom {
     background:#fff;
     padding:30px 0 10px 0;
-    border-top:2px solid #ffbf00;
+    border-top:2px solid #e5677d;
 }
 .footer-col ul.icon_list li a {
     line-height:25px;
@@ -2962,7 +2963,7 @@ p.note_mst {
 }
 .tags_products a {
     padding:8px 15px;
-    background:#ffbf00;
+    background:#e5677d;
     color:#fff;
     display:inline-block;
     margin-bottom:5px;
@@ -3198,7 +3199,7 @@ a:hover {
 }
 
 .name-pro-right a:hover h3 {
-   color:#ffbf00;
+   color:#e5677d;
 }
 
 .container .title{
@@ -3291,7 +3292,7 @@ ul.details-product-overlay li {
 }
 .panel-warning>.panel-heading {
     color: #fff;
-    background-color: #ffbf00;
+    background-color: #e5677d;
     border-color: #ddd; 
     font-size: 18px;
     /* margin: -1px; */
@@ -3301,3 +3302,8 @@ ul.details-product-overlay li {
       overflow-y:scroll;
       width:100%;
       }
+.title_product{
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

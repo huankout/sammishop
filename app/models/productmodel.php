@@ -40,10 +40,10 @@
 			$sql = "SELECT * FROM $table,$table_product WHERE $cond_related";
 			return $this->db->select($sql);
 		}
-        // public function product_hot($table_product){
-		// 	$sql = "SELECT * FROM $table_product WHERE product_hot != 1 ORDER BY $table_product.id_product DESC";
-		// 	return $this->db->select($sql);
-		// }
+        public function product_hot($table_product){
+			$sql = "SELECT * FROM $table_product WHERE product_hot != 1 ORDER BY $table_product.id_product DESC";
+			return $this->db->select($sql);
+		}
 		
 	}
 

@@ -69,7 +69,7 @@
                               <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
                            </div>
                            <div class="color_price">
-                              <span class="title_price bg_green">Giá bán</span> <?php echo number_format($detail['price_product'], '0', ',', '.') . 'Đ'; ?> <span>vnđ</span>.
+                              <span class="title_price bg_green">Giá bán</span> <?php echo number_format($detail['price_product'], '0', ',', '.') ; ?> <span>đ</span>.
                               <div class="clear"></div>
                            </div>
                         </div>
@@ -132,9 +132,9 @@
                      <div class="bx-contact">
                         <span class="title-cnt">Bạn cần hỗ trợ?</span> 
                         <p>Chat với chúng tôi :</p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo BASE_URL ?>public\images\icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo BASE_URL ?>public\images\icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo BASE_URL ?>public\images\icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                         <!--<div class="sup-item item1">
                            <div>
                            
@@ -222,10 +222,10 @@
                   <div class="tab_link">
                      <h3 class="title_tab_link">TAGS: </h3>
                      <div class="content_tab_link"> 
-                        <a href="tag/">Iphone x</a>
-                        <a href="tag/">Iphone 10</a>
-                        <a href="tag/">Iphone 11</a>
-                        <a href="tag/">Iphone Like New</a>
+                        <a href="tag/">Mỹ phẩm</a>
+                        <a href="tag/">Chăm sóc tóc</a>
+                        <a href="tag/">Trang điểm</a>
+                        <a href="tag/">Sữa rửa mặt</a>
                      </div>
                   </div>
                </div>
@@ -249,7 +249,7 @@
                            <div class="content">
                               <div class="img-right-pro">
                                  <a href="sanpham.php">
-                                 <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/<?php echo $relate['image_product'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                 <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $relate['image_product'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                  </a>
                                  <div class="content-overlay"></div>
                                  <div class="content-details fadeIn-top">
@@ -260,7 +260,7 @@
                               </div>
                               <div class="name-pro-right">
                                  <a href="chitietsp.php">
-                                    <h3><?php echo $relate['title_product'] ?></h3>
+                                    <h3 class="title_product"><?php echo $relate['title_product'] ?></h3>
                                  </a>
                               </div>
                               <div class="add_card">

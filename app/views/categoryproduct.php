@@ -47,8 +47,8 @@
                                     <div class="img-right-pro">
                                         <a href="sanpham.php">
                                             <img class="lazy img-pro content-image"
-                                                src="<?php echo BASE_URL ?>public/images/<?php echo $product['image_product'] ?>"
-                                                data-original="<?php echo BASE_URL?>public/images/<?php echo $product['image_product'] ?>"
+                                                src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $product['image_product'] ?>"
+                                                data-original="<?php echo BASE_URL?>public/uploads/product/<?php echo $product['image_product'] ?>"
                                                 alt="nhìn cái chó gì" />
                                         </a>
                                         <div class="content-overlay"></div>
@@ -57,7 +57,7 @@
                                     <div class="name-pro-right">
                                         <a
                                             href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
-                                            <h3><?php echo $product['title_product'] ?></h3>
+                                            <h3 class="title_product"><?php echo $product['title_product'] ?></h3>
                                         </a>
                                     </div>
                                     <div class="add_card">
