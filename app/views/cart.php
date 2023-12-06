@@ -118,19 +118,22 @@
                      <ul class="contact-list">
                         <li class="addr">
                            <strong class="title">Địa chỉ của chúng tôi</strong>
-                           <p><em><strong>3tmobile</strong></em><br />
-                           <p>Trung Tâm Bán Hàng:</p>
-                           <p>CN1: 333B Minh Phụng, Phường 2, Quận 11, HCM</p>
-                           <p>CN2: 548 Lý Thái Tổ, Phường 10, Quận 10, HCM</p>
-                           <p>N3: 297 Quang Trung, Phường 10, Q. Gò Vấp, HCM</p>
-                           <p> CN4: 72 Đinh Tiên Hoàng, Phường 01, Q. Bình Thạnh, HCM</p>
-                           <p> Hotline: 0888 70 8284 - 0936 11 7080 (zalo)</p>
+                           <p><em><strong>Sammishop</strong></em><br />
+                           <br>
+                           <p>65 Nguyễn Phong Sắc, Cầu Giấy, Hà Nội</p>
+                           <p> Hotline: 1900 2631 - Nhánh 101</p>
+                           <br>
+                           <p>244 - 252 Nguyễn Trãi, Hà Đông, Hà Nội</p>
+                           <p> Hotline: 1900 2631 - Nhánh 107</p>
+                           <br>
+                           <p>56 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội</p>
+                           <p> Hotline: 1900 2631 - Nhánh 103</p>
                            </p>
                         </li>
                      </ul>
                      <div class="hiring-box">
                         <strong class="title">Chào bạn!</strong>
-                        <p>Mọi thắc mắc bạn hãy gửi về mail của chúng tôi <strong>3tmobile@webextrasite.com</strong> chúng tôi sẽ giải đáp cho bạn.</p>
+                        <p>Mọi thắc mắc bạn hãy gửi về mail của chúng tôi <strong>cskh@sammishop.com</strong> chúng tôi sẽ giải đáp cho bạn.</p>
                         <p><a href="." class="arrow-link"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Về trang chủ</a></p>
                      </div>
                   </div>

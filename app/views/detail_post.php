@@ -65,15 +65,17 @@
             <div class="content">
                <div class="img-right-pro">
                   <a href="<?php echo BASE_URL ?>news/news_detail/<?php echo $relate['id_post'] ?>">
-                  <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/images/<?php echo $relate['image_post'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                  <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/uploads/post/<?php echo $relate['image_post'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                   </a>
+               </div>
                <div class="name-pro-right">
                   <a href="<?php echo BASE_URL ?>news/news_detail/<?php echo $relate['id_post'] ?>">
-                     <h3><?php echo $relate['title_post'] ?></h3>
+                     <h3 class="title_product"><?php echo $relate['title_post'] ?></h3>
                   </a>
                </div>
             </div>
          </div>
+      </div>
          <!--start:left-->
          <div class="wrapper_all_main_left">
          </div>

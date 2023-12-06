@@ -29,7 +29,7 @@
         $i++;
       ?>
       <tr>
-        <td><div class="col1"><?php echo $i; ?></div></td>
+        <td><div class="col1"><?php echo $pro['id_product']; ?></div></td>
         <td><div class="col2"><?php echo $pro['title_product']; ?></div></td>
         <td><div class="col3"><img src="<?php echo BASE_URL?>public/uploads/product/<?php echo $pro['image_product']; ?>" height="100" width="100"></div></td>
         <td><div class="col4"><?php echo $pro['title_category_product']; ?></div></td>

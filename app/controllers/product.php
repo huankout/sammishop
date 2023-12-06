@@ -46,6 +46,18 @@
 			$unique_image = $div[0].time().'.'.$file_ext;
 			$path_uploads = "public/uploads/product/".$unique_image;
 
+			$table_product = "tbl_product";
+			$table_category = "tbl_category_product";
+			$productmodel = $this->load->model('productmodel');
+			$data['product'] = $productmodel->product($table_product, $table_category);
+			foreach($data['product'] as $key => $value){
+				if($value['title_product']==$title){
+					$message['msg'] = "thêm sản phẩm thất bại";
+					header("Location:".BASE_URL."product/list_product?msg=".urlencode(serialize($message)));
+					break;
+				}
+			}
+
 			$data = array(
 				'title_product' => $title,
 				'price_product' => $price,
@@ -56,8 +68,7 @@
 				'id_category_product' => $category
 
 			);
-
-			$productmodel = $this->load->model('productmodel');
+			
 			$result = $productmodel->insert_product($table, $data);
 
 			if ($result == 1) {
