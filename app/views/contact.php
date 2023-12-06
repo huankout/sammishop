@@ -7,9 +7,24 @@
                   <li class="addr">
                      <strong class="title">Địa chỉ của chúng tôi</strong>
                      <p>
-                        <em><strong>3t phone</strong></em><br />
-                        <em> 333B Minh Phụng, Phường 2, Quận 11, HCM<br />
-                        Điện thoại : 0932 023 992<br />
+                        <em><strong>Sammishop</strong></em><br />
+                        <em>65 Nguyễn Phong Sắc, Cầu Giấy, Hà Nội<br />
+                        Điện thoại :  1900 2631 - Nhánh 101<br />
+                        <br />
+                        <!--   <strong>Điện thoại: <span style="color:#FF0000"></span></strong></em> -->
+                     </p>
+                     <p>
+                        <em><strong>Sammishop</strong></em><br />
+                        <em>244 - 252 Nguyễn Trãi, Hà Đông, Hà Nội<br />
+                        Điện thoại :  1900 2631 - Nhánh 107<br />
+                        <br />
+                        <!--   <strong>Điện thoại: <span style="color:#FF0000"></span></strong></em> -->
+                     </p>
+                     <p>
+                        <em><strong>Sammishop</strong></em><br />
+                        <em>56 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội<br />
+                        Điện thoại :  1900 2631 - Nhánh 103<br />
+                        <br />
                         <!--   <strong>Điện thoại: <span style="color:#FF0000"></span></strong></em> -->
                      </p>
                   </li>

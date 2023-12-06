@@ -57,7 +57,7 @@
                                     <div class="name-pro-right">
                                         <a
                                             href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $product['id_product'] ?>">
-                                            <h3><?php echo $product['title_product'] ?></h3>
+                                            <h3 class="title_product"><?php echo $product['title_product'] ?></h3>
                                         </a>
                                     </div>
                                     <div class="add_card">
