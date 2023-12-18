@@ -52,7 +52,7 @@
                         ?>
                         <tr class="tr">
                            <td data-th="Hình ảnh">
-                              <div class="col_table_image col_table_hidden-xs"><img src="<?php echo BASE_URL ?>public\images\<?php echo $value['product_image'] ?>" alt="<?php echo $value['product_title'] ?>" class="img-responsive"/></div>
+                              <div class="col_table_image col_table_hidden-xs"><img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['product_image'] ?>" alt="<?php echo $value['product_title'] ?>" class="img-responsive"/></div>
                            </td>
                            <td data-th="Sản phẩm">
                               <div class="col_table_name">

@@ -91,13 +91,17 @@
                            <div class="clear"></div>
                         </div>
                         <div class="wp_a">
-                           <a onclick="return giohang(579);" class="view_duan">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
-                           </a>
-                           <a href="tel:090 66 99 038" class="view_duan">
-                           <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi ngay</span>
-                           </a>
+                           <form action="<?php echo BASE_URL ?>cart/addcart" method="POST">
+                                <input type ="hidden" value="<?php echo $detail['id_product'] ?>" name ="product_id">
+                                <input type ="hidden" value="<?php echo $detail['title_product'] ?>" name ="product_title">
+                                <input type ="hidden" value="<?php echo $detail['image_product'] ?>" name ="product_image">
+                                <input type ="hidden" value="<?php echo $detail['price_product'] ?>" name ="product_price">
+                                <input type ="hidden" value="1" name ="product_quantity">
+                              <div class="add_card">
+                                    <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
+                                </div>
                            <div class="clear"></div>
+                           </form>
                         </div>
                         <div class="clear"></div>
                      </div>
@@ -251,23 +255,25 @@
                                  <a href="sanpham.php">
                                  <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $relate['image_product'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                  </a>
-                                 <div class="content-overlay"></div>
+                                 <div class="content-overlay" onclick="window.location.href ='<?php echo BASE_URL ?>user_product/detail_product/<?php echo $relate['id_product'] ?>'"></div>
                                  <div class="content-details fadeIn-top">
-                                    <ul class="details-product-overlay">
-                                       <?php echo $relate['desc_product'] ?>
-                                    </ul>
                                  </div>
                               </div>
                               <div class="name-pro-right">
-                                 <a href="chitietsp.php">
+                                 <a href="<?php echo BASE_URL ?>user_product/detail_product/<?php echo $relate['id_product'] ?>">
                                     <h3 class="title_product"><?php echo $relate['title_product'] ?></h3>
                                  </a>
                               </div>
-                              <div class="add_card">
-                                 <a onclick="return giohang(579);">
-                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                                 </a>
-                              </div>
+                                 <form action="<?php echo BASE_URL ?>cart/addcart" method="POST">
+                                      <input type ="hidden" value="<?php echo $relate['id_product'] ?>" name ="product_id">
+                                      <input type ="hidden" value="<?php echo $relate['title_product'] ?>" name ="product_title">
+                                      <input type ="hidden" value="<?php echo $relate['image_product'] ?>" name ="product_image">
+                                      <input type ="hidden" value="<?php echo $relate['price_product'] ?>" name ="product_price">
+                                      <input type ="hidden" value="1" name ="product_quantity">
+                                    <div class="add_card">
+                                       <input type="submit" style="box-shadow:none" class="btn btn-success" name="addcart" value ="Đặt hàng">
+                                   </div>
+                                 </form>
                               <div class="price_old_new">
                                  <div class="price">
                                     <span class="news_price"><?php echo number_format($relate['price_product'], '0', ',', '.') . 'Đ'; ?> đ </span>
